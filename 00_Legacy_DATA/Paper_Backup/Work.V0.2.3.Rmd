@@ -1,0 +1,234 @@
+---
+title: "Distance based suicide Intervention programs, a multi-level Meta-Analysis and systematic review."
+output: word_document
+bibliography: references.bib
+csl: apa6.csl
+after_body: appendix.md
+
+header-includes:
+  - \DeclareBibliographyCategory{asterisk}
+  - \renewbibmacro*{begentry}{\ifcategory{asterisk}{\ensuremath{\ast}}{}}
+  - \newcommand*{\nocitemeta}[1]{\nocite{#1}\addtocategory{asterisk}{#1}}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+op = function(x, d=2) sprintf(paste0("%1.",d,"f"), x) 
+op3 = function(x, d=3) sprintf(paste0("%1.",d,"f"), x) 
+op4= function(x, d=4) sprintf(paste0("%1.",d,"f"), x)
+
+```
+
+# Abstract
+
+Background: Distance based Interventions against suicidal thoughts and injuries are an increasingly found subject in the literature and seen as potential solution for the gap between needed and provided care. As such, it it is important to know their potential efficacy for treating highly prevalent suicidal toughs and injuries
+
+Aims: This meta-analysis aims to give the most comprehensive quantitative synthesis possible to the current effectiveness of distance based interventions against suicidal thoughts and injuries.
+
+Methods (data source; study selection, syntheses approach): For this analysis Web of Science, Scopus and Pubmed were systematically searched for all distance based interventions, including all types of distance interventions and all types of suicidal outcome measures, synthesising the data using an robust variance estimation corrected multilevel meta-analytical approach to return unbiased estimations of the effectiveness of interventions.
+
+Results: Overall distance based interventions have shown themself to be as effective as face-to-face treatment and internet based cognitive behavioural treatment. Efficacy against suicidal thoughts was low and almost negligible against acts . Human involvement had no significant impact on the effectiveness of interventions.
+
+Conclusion: Distance based interventions are an effective tool in a stepped care approach aimed against suicidal thoughts, but not necessarily against suicidal acts. Future research should focus on the development of mass distributable autonomous programs against suicidal thoughts.
+
+# Introduction
+
+Self injurious thoughts and behaviours (SITB) remain a global public health challenge. As worldwide each year an estimated 138 Million have suicide ideation, an estimated 20,7 Million try to commit suicide [@borges2010a] and around 800.000 people die by suicide[@zotero-17209].
+
+With these numbers SITB have also become a provider challenge, as only 17% to 56% of individuals presenting SITB receive the needed treatment [@bruffaerts2011]. Given both the total number of SITB and the low treatment coverage it is self evident that the current system must be supplemented by more efficient ways of providing care. With the efficiency of mental health services being an increasing provider demand [@knapp2020] and fiscal constraint the leading cause to not receive help from recipients [@bruffaerts2011], means that new supplement must provide low cost opportunities to treat SITB.
+
+One proposition of supplementing the current system is stepped care [@jobes2018a]. The Idea of stepped care is to provide low cost, low intensity services, such as crisis hotlines and brief interventions, to anyone expressing a need, in turn preventing the development disorders, disorders that would require high cost, high intensity treatment. By this, if successful, stepped care lowers the need for expensive treatment, with low cost treatment, while also reducing the human suffering.
+
+To be truly effective such stepped care should be available regardless of location and finances, but especially for SITB local availability is of utmost importance, as local unavailability is the second leading reason to not to receive care, while [@bruffaerts2011] rural regions are more and more effected by suicide [@kapusta2008].
+
+These pre-requites of a stepped care interventions for SITB makes autonomous distance based interventions, i.e. websites, mobile applications, the apparent choice, these being efficient and scalable [@batterham2015]. Although human involved programs should not be pre-excluded, as these offer a number of potential advantages and maybe more effective as autonomous programs. The idea of human involvement leading to higher effectivness is not without merit, given that factor of social abandoment and burden are major factor in developing suicidal ideation [@joiner2005]. While potential advantages of human involved programs are that they can easily and quickly be implemented, at lower initial costs[@carter2005], compared to developing new autonomous programs. Therefore human involved distance based interventions (DBI), even if only as effective, may still be an eligible alternative to autonomous programs and potentially more attractive for some service providers. Meaning for a comprehensive analysis both should be included and compared.
+
+While the differentiation between autonomous and human involved program is very important from an cost effectiveness standpoint, to evaluate distance based interventions (DBI) efficacy and implementation against SITB more than this is needed.
+
+To evaluate efficacy as important are: (a) Knowing if DBI are comparatively effective against suicidal thoughts and suicidal acts, the former being more relevant if DBI are used as low intensity preventive and treatment service, while the latter is more common if DBI are used as a low intensity postventive care service. (b) To know if DBI are mainly a tool to compensate for otherwise missing treatment, or useful alongside TAU treatment as well. (c) To all this the stability of interventions over time has inherent importance, as an intervention that reduces SITB over a prolonged period of time it is inherently more valuable, than one with rapidly diminishing returns.
+
+Addressing all these points makes the current meta-analysis the most comprehensive analysis to date, given the analysis the advantage of including at least 20 - 30 years [@evans1999] [@motto2001] of research history. By this we hope to achieve a high quality of evidence, allowing well founded and useful recommendations to the use of distance based interventions in clinical practice and recommendations for future research.
+
+## Methods
+
+The systematic search followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses guidelines [@moher2009], the review was Pre-Registered on Prospero under the pre-registration number: CRD42020218791.
+
+## Systematic Search
+
+Search strings were defined using repeated searches combining the terms suicide prevention or intervention, with the intervention types, (e.g.) Letter, or App, or Web-based, or distance. The resulting search string was tested and refined using two related meta-analyses. The first only researched non-digital distance based interventions [@milner2015] and the second only researched digital interventions [@torok2020]. The new search string was required to at least find all primary studies within both of these meta-analyses (see online Supplement 1 for the final search string).
+
+Once the search string was established, the first one hundred search results on Web of Science were search by two authors (J.S and K.R) together, thereby establishing a high common degree of understanding. After that the two authors (J.S. and K.R.) independently searched Web of Science, Scopus and Pubmed. Based on the full text selections of both authors the coeffienct of agreement was calculated. The initial systematic search was done in December 2020 and last updated on the ... [INTERNAL: As of 12.05. no new studies in WOS; but 2 protocols likely leading to inclusion studies] .
+
+In addition to primary studies meeting inclusion criteria, related systematic reviews were extracted and searched for further studies meeting inclusion criteria. Moreover the references of included primary studies were searched for potential studies to be included. Authors of studies meeting inclusion criteria, but not provided sufficient information for data extraction, were contacted to retrieve needed data.
+
+## Inclusion and exclusion criteria
+
+Included were all peer reviewed randomized control trials (RCT) Studies that employed a distance based intervention aiming at preventing self injurious thoughts and behaviours (SITB). Excluded were interventions aimed solely at Depression - or other disorders. Eligible were only distance based interventions, blended interventions, such as phone-calls and home visits were excluded. Face-to-face meetings were allowed, as long as these were not part of the intervention, i.e. for informing, testing or screening purposes.
+
+On an outcome level all outcomes were included that evaluated SITB, including Non Suicidal self injury (NSSI). Self evaluations by participants over potential future events were excluded. Further excluded were blended measure that could not be allocated to either suicidal thoughts or suicidal acts. All time-points were included; one intervention and one control group arm per study was included.
+
+## Data Extraction and Coding
+
+Data was coded by two authors (J.S and K.R.) semi-independent from each other. Once both authors were finished, coding sheets were combined and coded studies with differences were recoded. Included in the final sheet was: Author (Year), control group of study, Country of Study, Sample type, sample size, intervention type, sex ratio, Mean Age, the name of the outcome (e.g. self harm), the duration in Weeks, the Participant Attrition rate and the Follow up Time, SMD and variance of SMD. If possible non-imputed results were extracted, in case of more than two study arms, authors discussed the most appropriate intervention arm to be included; the final coding sheet is available as an online supplement.
+
+All outcomes were coded according to their characteristics into the following subgroups for categorical moderation analysis: (a) Suicidal Thoughts vs. Suicidal Acts, (b) Human involved vs. Autonomous, (c) TAU Control-group vs. Attention Placebo and Waitlist control-groups. See Table 1 for specific outcome allocation.
+
++-----------------+---------------------------------------------------------------------------------------------+
+| Moderator group | Variable Allocation                                                                         |
++=================+=============================================================================================+
+| Acts            | Suicide, suicide attempts, deliberate Self Harm.                                            |
++-----------------+---------------------------------------------------------------------------------------------+
+| Thought         | Suicidal troughs, suicidal ideation, suicide planning.                                      |
++-----------------+---------------------------------------------------------------------------------------------+
+| Human Involved  | Phone calls, cognitive behavioural treatment, personalized letters or personalized e-mails. |
++-----------------+---------------------------------------------------------------------------------------------+
+| Autonomous      | Applications, websites, non-individualized letters or non-individualized e-mails            |
++-----------------+---------------------------------------------------------------------------------------------+
+
+## Risk of bias and publication bias
+
+Risk of bias was assessed using the RoB-2 [@sterne2019]. Given emerged data Trim and Fill was used as the most appropriate publication bias detection method [@fernandez-castilla2021].
+
+## Statistical Method
+
+To incorporate all outcomes of interest we used a three level meta-analysis[@vandennoortgate2015][@cheung2019], with Robust variance estimation (RVE) correction[@hedges2010][@moeyaert2017]. RVE return valid confidence intervals in presence of dependent data [@park2019a], while the three level model allowed for outcome-level heterogeneity investigation [@vandennoortgate2013]. Heterogeneity was estimated using *Q* Statistics. Models were fitted with restricted maximum likelihood estimation (REML), RVE correction was based on the correction by Pustejovsky & Tipton [-@pustejovsky2016].
+
+Calculations were done in R [@base] using the package metafor [@metafor], RVE correction was done using the package clubSandwich [@clubSandwich]. The R-Code is available as online supplement.
+
+## Sensitivity Analysis
+
+We employed two sensitivity analysis. The first analysis included NSSI as an outcome, the second analysis excluded suicide cases as an outcome. This was done as: (a) Following the DSM-5 [@americanpsychiatricassociation2013a] we understood NSSI to be different from suicidal self harm, therefore excluding it from the main analysis. (b) Discussions about the qualitative difference of suicide attempts and suicides [@joiner2005], prompted us to implement a sensitivity analysis excluding suicide cases.
+
+## Deviation from Pre-Registered Report
+
+Due to the low number of independent studies, the originally planned method would have likely produced underpowered results. We instead used RVE with a three-level model, following a current proposition [@pustejovsky2020].
+
+We initially wanted to base the publication bias detection method on the paper by Renkewitz [-@renkewitz2019], but deviated from the preregistration protocol, as a more accurate paper was published afterwards [@fernandez-castilla2021].
+
+# Results
+
+```{r include = FALSE}
+source("Intervention.Code.R", local = knitr::knit_global())
+
+```
+
+## Emerged Data
+
+We identified 3,287 papers with a systematic search of the databases and an additional 11 studies from other sources (see Flow Chart). After exclusions `r k.Studies` independent studies remained. Note the inclusion of follow up studies, explain the discrepancy between the in flow chart reported studies and the amount of independent studies included. Follow up studies are statistically depended studies, but are as follow up measures of interest. Follow up studies and parent studies were statistically treated as a single study; but are reported within the flow chart and references as independent, to give proper credit to the authors and allow replication. Both authors (J.S & K.R) agreed to 89% about the inclusion and exclusion of studies.
+
+Overall `r n.outcome.Total` outcomes emerged, with `r n.Thinking` outcomes of the category thinking, predominantly ideation and planning, and `r n.Acting` outcomes of the category acting, predominantly deliberate self harm. `r n.Individual` outcomes evaluated human involved programs and `r n.Autonomous` outcomes evaluated autonomous programs. The median exposure time of all interventions was `r op(Duration.weeksmedian)` weeks, with a range of `r Low.Duration` to `r Max.Duration` weeks. The median time between post-intervention measures and follow up measures was `r MedianFollowup` weeks, with a range of `r highestF` weeks to `r lowestF` weeks.
+
+The median Attrition rate was `r op(Attrition.total)` % with a maximum of `r higestAttr.` % and a minimum of 0 %. Due to the very different frequencies and types between the interventions quantitative reporting of utilisation was not seen as sensible.
+
+![](PRISMA%202009%20flow%20diagram.png){width="13219"}
+
+### Sample Characteristics
+
+The sample was `r op(Mean.Sex)` % female and on average `r op(Mean.Age)` years old. With the youngest sample being `r min.Age` years old and the oldest `r max.Age` years.
+
+Most studies were from the United States with (*k=* 10), followed by Australia with (*k* = 8)studies. *K =* 6 studies were implemented in non westernised educated industrialised democracies (WEIRD).
+
+## Main Analysis
+
+The Overall effect size of distance based Interventions to reduce SITB was low with SMD = `r op(OverallRVECI$beta)` CI95%[`r op(OverallRVECI$CI_L)`; `r op(OverallRVECI$CI_U)`]. Heterogeneity was significant at *Q* (df = `r Overall$dfs`)= `r op(Overall$QE)`, *p =* `r op4(Overall$QEp)`.
+
+The Moderation effect of Thoughts vs. Acts was significant. Interventions were less effective against suicidal acts *SMD =* `r op(Eff.Acting)`, than against Thoughts `r op(Eff.Thinking)`. The moderator Thoughts vs. Acts explained a significant degree of heterogeneity, returning with *Q* (df = `r Overall.T$dfs`) = `r op(Overall.T$QE)`, *p =* `r op(Overall.T$QEp)` insignificant heterogeneity.
+
+The Moderation effect of TAU control-group vs. waitlist and attention placebo control groups was significant. Effectiveness against SITB was significantly smaller in studies using TAU at *SMD* = `r op(Eff.TAU)`, compared to studies using waitlist and Attention Placebo control groups, *SMD=* `r op(Eff.WaitAtt)`. The Moderator Controlgroups did not explain a substantial degree of heterogeneity, results remained heterogeneous *Q* (df = `r OverallC$dfs`) = `r op(OverallC$QE)`, *p =* `r op(OverallC$QEp)`. Data availability limitations lead to comparisons of TAU vs. waitlist and TAU vs. Attention Placebo to be statistically untrustworthy.
+
+From Post Intervention to Follow up Measurements the interventions effectiveness in reducing SITB decreased insignificant, yet notable, with *SMD =* `r op(Overall.FCRVECI$beta[2])` CI95%[`r op(Overall.FCRVECI$CI_L[2])`; `r op(Overall.FCRVECI$CI_U[2])`]. The decrease should be noted, as post intervention measures reported *SMD =* `r op(Eff.Post)`, compared to *SMD* = `r op(Eff.Follow)` measures at follow up.
+
+The type of Intervention utilised had again an insignificant, yet notable, impact on the effectiveness of the intervention with *SMD =* `r op(Overall.IRVECI$beta[2])` CI95%[`r op(Overall.IRVECI$CI_L[2])`; `r op(Overall.IRVECI$CI_U[2])`]. Namely human based interventions were insignificantly less effective *SMD* = `r op(Eff.Human)`, than autonomous interventions with *SMD* = `r op(Eff.Auto)`.
+
+## Sensitivity Analysis
+
+Including NSSI in the moderator analysis of thinking vs. acting returned negligible impact on the results *SMD* = `r op(Overall.TRVE2$beta[1])` , than the analysis without NSSI included; *SMD =* `r op(Overall.TRVE$beta[1])`. Excluding Suicides lead to negligible less effective results *SMD* = `r op(Overall.TSRVE$beta[1])`, than the analysis including suicide cases *SMD =* `r op(Overall.TRVE$beta[1])`.
+
+## Exploratory Analysis
+
+[INTERNAL QUESTION: Should we include a exploratory Analysis?
+
+Implementing Toughs vs. Behaviours with the other moderator analysis; Note in essence controlling for Thoughts and Behaviours??]
+
+-\> Result would be: TAU no longer significant, other than that, only that all results would be homogeneous & Thinking becoming even more significant.
+
+## Systematic Overview [MISSING]
+
+[...]
+
+## Publication Bias and Risk of Bias Assessment
+
+Risk of bias of all *independent* studies was mixed (see Figure 2.). Using Trim and Fill no publication bias emerged.
+
+![](RoB-2.png)
+
+# Discussion
+
+We investigated the effectiveness of distance based intervention in reducing Self injurers thoughts and behaviours (SITB), from this it can be said that: Distance based suicide interventions lead to a robust and relative stable, albeit small, reduction in SITB. The Quality of evidence was good, given a considerable amount of RCT, with some high quality studies.
+
+### Contextualising results with other Meta-Analysis
+
+Comparing results for self harming and suicide attempt outcomes using TAU controlgroups of distance based interventions to face-to-face therapeutic interventions [@ougrin2015]: Distance based interventions were as effective as therapeutic interventions. Note that psychoanalytical interventions [@briggs2019] reported a two to three times higher effect size against self harm, than those reported for distance based interventions, but remained statistically insignificant.
+
+Comparing the reductions of suicidal ideation in distance based approaches to face-to-face interventions, one meta-analysis could be located for comparison, evaluating participants with psychotic symptoms[@bornheimer2020]. While the specific type of sample limits generalisability, comparing results implies that: Distance based interventions were as effective as face-to-face interventions.
+
+Lastly comparing all distance based interventions to internet delivered cognitive behavioural treatments (iCBT) [@buscher2020c], both meta-analytical results are comparable, meaning that: iCBT has no advantage in effectiveness over any other kind of distance based intervention.
+
+### Discussing Results
+
+That the reduction of suicidal self harming behaviours can be two times larger [@briggs2019], than the results presented in this meta-analysis and still be statistically insignificant emphasises the first point: Reduction of self harming behaviour, due to all observed interventions, is on an individual basis negligible.
+
+This excludes the standalone use of distance based interventions (DBI) against self harming behaviour, but not the use of face-to-face treatments for self harming behaviour. As the inherent capability of face-to-face treatment to lower the barrier to combined pharmacological and psychotherapeutic treatment [@cuijpers2020], treatment of disorders linked to suicide [@harris1996] and inpatient care legitimacies this form of treatment over distance based interventions.
+
+As such distance based interventions (DBI) and face-to-face interventions, even though comparable in direct effectiveness fulfil different roles. Face-to-face treatment is most appropriate for individuals that potentially need high intensity care and/or seek treatment for an underlying disorder, while DBI is for low level care against suicidal thoughts, inappropriate if pronounced suicidal crisis are to be expected.
+
+Applied to the stepped care idea, DBI can be the cost effective intervention to combat the global health challenge that are 138 Million individuals experiencing suicidal ideation, but the remaining 20,7 Million individuals that try to commit suicide must be treated by more flexible and intensive treatment forms. That autonomous distance based interventions (DBI) were about as effective as human involved programs underpins the idea of DBI as to tool to care for 138 Million people in a cost effective manner.
+
+### Research recommendations
+
+As no senior citizens samples emerged, the first recommendation is to implement research on this group. As demographic development dictates an increase in the percentage of senior citizens in the overall population over the next decades, with senior citizens reporting high prevalences of suicides [@zotero-17209], the need for low cost support is self evident.
+
+In general development should be focused on autonomous interventions, due to better scalability and cost effectiveness. For for the time being aimed at providing continuous low cost community level support, *not* supplanting psychotherapeutic care. Contrary, new distance based interventions (DBI) should facilitate access and willingness to access psychotherapy. And include an evaluation tool for the severity of the SITB of its users, to provide a strong recommendation to seek psychiatric care if SITB exceed a certain threshold.
+
+Long term, as DBI were as effective as internet based cognitive behavioural treatments (iCBT) [@buscher2020c], the development of programs that *partly* supplant in residence therapy *sessions* could allow for the development of new schools of psychotherapy. Schools that combine very low frequency sessions, with high intensity therapy, by using autonomous distance based interventions to compensate for the missing sessions. Such therapy forms could allow lower and medium income households access to psychotherapy.
+
+### Implications for clinical practice
+
+The current state of distance based interventions have some clinical implications. First distance based interventions are not sufficient to supplant psychiatric care. Going further, as long as all forms of TAU can be made available to an individual, distance based interventions may not be needed. But as TAU is in a majority of cases not available [@bruffaerts2011], the use of distance based interventions (DBI) should be considered by almost all psycho-social service providers; especially against ideation.
+
+In short DBI should be an integral part in a stepped care approach and known as an option for any psycho-social service provider. As DBI provides immediate care with minimal cost per user, as such being the only realistic way to implement best practice advice [@oconnor2014]. Further it is without question that even a small reduction of SITB provided with such scalable Interventions can reach a large population, in turn reducing the absolute suffering, alongside freeing resources for those who are not helped by DBI. Concluding: In almost any case providing DBI is superior than to send the patient home without any help.
+
+## Limitation
+
+Given the comprehensive approach of the analysis some limitations must be noted. First, often high heterogeneity was reported. But, the moderator thinking vs. acting explained a substantial degree of heterogeneity and, given the large number of different terms, scales, countries and populations subsumed within a single analysis, in practice effect sizes were remarkable homogeneous.
+
+Second, given the number of included independent studies and demanding model results might be underpowered, potentially leading to too narrow confidence intervals [@tanner-smith2014]. Although no evidence to this emerged in any analysis and all reported significances were notably smaller then *p*= 0.05. As such even if confidence intervals would be somewhat to narrow, the current effects would still retain significance.
+
+nocite:\| @amadeo,@batterham2018a,@beautrais2010,@bertolote2010,@bush2017,@carter2005,@carter2007,@carter2013,@cedereke2002,@christensen2013a,@comtois2019,@dejaegere2019,@evans2005,@evans1999,@franklin2016,@guille2015,@hassanian-moghaddam2011,@hassanian-moghaddam2017a,@hetrick2017,@hill2019,@hooley2018,@kasckow2016,@luxton2020,@motto2001,@mouaffak2015,@mousavi2014,@niederkrotenthaler2020a,@oconnor2017a,@robinson2012,@rodantea,@tighe2017,@vaiva2018,@vaiva2006,@vanspijker2014,@vanspijker2018,@wilks2018a,@wilksch2019,@wei2013
+
+# References
+
+::: {#refs}
+:::
+
+# Appendix
+
+## Online Supplement 1
+
+### Search Strings:
+
+Note: Search string was adapted in Scopus adding: TITLE-ABS-KEY. This is implied when using WOS and Pubmed. As in WOS and Pubmed Title, Abstract and Keywords were also searched, both strings are in practice identical.
+
+#### For WOS and Pubmed
+
+(("Suic\*" OR "Suicide prevention" OR "self harm\*" OR "self poisoning\*" OR "self injur\*" OR "self mutilation" ) AND ("telehealth"OR"postcard\*"OR "onlin\*"OR"Online Intervention" OR "Online Prevent\*" OR "E Intervention" OR "E-Intervention" OR "E Prevention" OR "Electronic Intervention" OR "Electronic Prevention" OR "Mobile Intervention" OR "Mobile Prevention" OR "Web-Based\*" OR "Web Based\*"  OR "Online Support" OR "E Therapy" OR "e-mail\*" OR "e mail\*" OR "App" OR "Apps" OR "App-Assis\*" OR "mobile-App" OR "mobile health intervention" OR "telephone" OR "phone based" OR "letter\*") AND (RCT OR Random\*))
+
+#### Scopus:
+
+( TITLE-ABS-KEY ( ( "Suic\*"  OR  "Suicide prevention"  OR  "self harm\*"  OR  "self poisoning\*"  OR  "self injur\*"  OR  "self mutilation" )  AND  ( "telehealth"  OR  "postcard\*"  OR  "onlin\*"  OR  "Online Intervention"  OR  "Online Prevent\*"  OR  "E Intervention"  OR  "E-Intervention"  OR  "E Prevention"  OR  "Electronic Intervention"  OR  "Electronic Prevention"  OR  "Mobile Intervention"  OR  "Mobile Prevention"  OR  "Web-Based\*"  OR  "Web Based\*"  OR  "Online Support"  OR  "E Therapy"  OR  "e-mail\*"  OR  "e mail\*"  OR  "App"  OR  "Apps"  OR  "App-Assis\*"  OR  "mobile-App"  OR  "mobile health intervention"  OR  "telephone"  OR  "phone based"  OR  "letter\*" )  AND  ( rct  OR  random\* ) ) )
+
+## Online Supplement 2
+
+### Code.R
+
+Coding_Sheet.csv

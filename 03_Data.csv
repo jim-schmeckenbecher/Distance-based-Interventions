@@ -1,4 +1,4 @@
-Author;Year;Country;Intervention;wait;Attention;TAU;Study_ID;Autonomous;Sex_Female;Age_(mean);Age_(SD);Outcome_ID;d;v;Thinking;Type;DSH;Spesific;NSSI;Suicide;Follow_up;Duration (weeks);Total Attrition (%);Follow_up Time;n
+Author;Year;Country;Intervention;wait;Attention;TAU;Study_ID;Autonomous;Sex_Female;Age_(mean);Age_(SD);Outcome_ID;d;v;Thinking;Type;DSH;Spesific;NSSI;Suicide;Follow_up;Duration_weeks;Total_Attrition;Follow_up_Time;n
 Amadeo;2015;PYF;Phone calls;0;0;1;1;0;64;32;NA;1;0.172;0.0356;0;Act;1;SA, SH;0;0;0;78;0;NA;190
 Batterham;2018;AUS;Online program;0;1;0;2;0;86;NA;NA;2;-0.315;0.0196;1;Thought;0;SI;0;0;0;1.5;59;NA;54
 Batterham;2018;AUS;Online program;0;1;0;2;0;86;NA;NA;3;-0.305;0.0196;1;Thought;0;SI;0;0;1;13.5;66;12;45

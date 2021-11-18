@@ -1,7 +1,8 @@
 ---
 title: "Distance based suicide Intervention programs, a multi-level Meta-Analysis and systematic review."
+author: "Jim Schmeckenbecher, Katrin Rattner, Robert Cramer, Paul Plener, Anna Baran, Nestor Kapusta"
 output: word_document
-bibliography: references.bib
+bibliography: 06_references.bib
 csl: apa6.csl
 after_body: appendix.md
 header-includes:
@@ -24,33 +25,33 @@ op = function(x, d=2) sprintf(paste0("%1.",d,"f"), x)
 
 Background: Distance based Interventions against suicidal thoughts and
 behaviours are an increasingly found intervention type in the
-literature,which has the potential to close the gap between needed and
+literature, which has the potential to close the gap between needed and
 provided care. Aims: Evaluate the effectiveness of distance based
 interventions against suicidal thoughts and behaviours by implementing a
 meta analysis and systematic review. Methods: We systematically searched
-Web of Science, Scopus and Pubmed for all distance based interventions;
-including all types outcome measures of suicidality. Data was
-synthesised using a robust variance estimation corrected multilevel
-meta-analysis . Results: 41? studies were included , reporting 121
-outcomes . Effectiveness against suicidal thoughts was at low (SMD= *SMD
-=*-0.17 CI95%[-0.21;-0.13]), but comparable to face-to-face
-interventions . Against suicidal behaviours effectiveness were
-significantly lower, but still significant (SMD*=* -0.06 CI95%
-[-0.08;-0.03] ). Human involvement had no significant impact on
-effectiveness. Conclusion: Distance based interventions are an effective
-tool in a stepped care approach aimed against suicidal thoughts, but for
-suicidal behaviours more effective interventions are needed. Future
-research should focus on the development of mass distributable
-autonomous programs against suicidal ideation and plans.
+Web of Science, Scopus and Pubmed for all distance based
+interventions;including all types outcome measures of suicidality. Data
+was synthesised using a robust variance estimation corrected multilevel
+meta-analysis . Results: 41 studies were included , reporting 121
+outcomes . Effectiveness against suicidal thoughts was at low (*SMD =*
+-0.17 CI95%[-0.21;-0.13]), but comparable to face-to-face interventions.
+Against suicidal behaviours effectiveness were significantly lower, but
+still significant (SMD = *SMD =* -0.06 CI95% [-0.08;-0.03] ),. Human
+involvement had no significant impact on effectiveness. Conclusion:
+Distance based interventions are an effective tool in a stepped care
+approach aimed against suicidal thoughts, but for suicidal behaviours
+more effective interventions are needed. Future research should focus on
+the development of mass distributable autonomous programs against
+suicidal ideation and plans.
 
 # Introduction
 
 Suicidal thoughts and behaviours are both a challenge for public health
 and for service providers, given that annually 138 Million people
 experience suicide ideation, 20.7 Million people attempt suicide
-[@borges2010a] and around 700.000 people die by suicide
+[@borges2010] and around 700.000 people die by suicide
 [@worldhealthorganization2021]. Still only 17% to 56% of them receive
-treatment [@bruffaerts2011]. Besides these unaddressed needs, low
+treatment [@bruffaerts2011]. Besides these undressed needs, low
 treatment rates are linked to two structural barriers: Treatment cost
 and availability [@bruffaerts2011].
 
@@ -60,7 +61,7 @@ the patients stage of suicidal progression, rather than using a one fits
 all solution. It has been suggested to implement a stepped care
 approach, least restrictive care at early stages and to increase
 restrictions gradually with advancement of suicidal progression
-[@jobes2018a].In this sense, easily available and affordable treatment
+[@jobes2018].In this sense, easily available and affordable treatment
 can lower treatment barriers and involve individuals otherwise
 hesitating to seek help at early suicidal stages [@bruffaerts2011].
 Early interventions at the stage of suicide ideation, have been
@@ -123,8 +124,7 @@ results of Web of Science were examined together by the authors J.S. and
 K.R., establishing a common degree of understanding. After which, both
 authors independently searched Web of Science, Scopus and Pubmed;
 Systematic searches were last updated on the ...... . Cohen's κ between
-both authors was calculated with 0.806. [INTERNAL: As of 30.09 in WOS no
-new entries]
+both authors was 0.806. [INTERNAL: As of 30.09 in WOS no new entries]
 
 ## Inclusion and exclusion criteria
 
@@ -142,80 +142,84 @@ programs, such as phone-calls including home visits were excluded.
 
 ## Data Extraction and Coding
 
-Data was coded independently by two authors (J.S and K.R.), if possible,
-coding non-imputed results, coded were: Author, Year, control group of
-study, Country of Study, Sample type, sample size, intervention type,
-sex ratio, Mean Age, the name of the outcome (e.g. self harm), the
-duration in Weeks, the Participant Attrition rate, the Follow up Time,
-Standard Mean Difference (*SMD)* and variance of *SMD*. In addition, all
-outcomes were divided into subgroups according to their characteristics
-(see Table 1). Coding sheet is available in the Appendix
+Data was coded independently by two authors (J.S and K.R.). Where
+possible non-imputed results, were coded. The following variables were
+extracted : Author, Year, control group of study, Country of Study,
+Sample type, sample size, intervention type, sex ratio, mean age, mean
+age(SD), the outcome name (e.g. self-harm), intervention duration in
+weeks, the participant attrition rate, the follow up time, standard mean
+difference (*SMD)* and variance of *SMD*. In addition, all outcomes were
+coded for the moderation analysis into subgroups (see Table 1).
 
-+----------+-----------------------------------------------------------+
-| M        | Outcome Allocation                                        |
-| oderator |                                                           |
-| group    |                                                           |
-+==========+===========================================================+
-| Acts     | Suicide, suicide attempts, deliberate Self Harm.          |
-+----------+-----------------------------------------------------------+
-| Thought  | Suicidal thoughts, suicidal ideation, suicide planning.   |
-+----------+-----------------------------------------------------------+
-| Human    | Phone calls, cognitive behavioural treatment,             |
-| Involved | personalized letters or personalized e-mails.             |
-+----------+-----------------------------------------------------------+
-| Au       | Applications, websites, non-individualized letters or     |
-| tonomous | non-individualized e-mails                                |
-+----------+-----------------------------------------------------------+
+TABLE 1.
 
-: Table 1. Outcome allocation to subgroups.
++-----------+-----------------------------------------------------------+
+| Moderator | **Outcome Name**                                          |
+| group     |                                                           |
++===========+===========================================================+
+| Acts      | Suicide, suicide attempts, self harming behaviours.       |
++-----------+-----------------------------------------------------------+
+| Thoughts  | Suicidal thoughts, suicidal ideation, suicide plans.      |
++-----------+-----------------------------------------------------------+
+| Human     | Phone calls, cognitive behavioural treatment,             |
+| involved  | personalized letters or personalized e-mails.             |
++-----------+-----------------------------------------------------------+
+| A         | Applications, websites, non-individualized letters or     |
+| utonomous | non-individualized e-mails.                               |
++-----------+-----------------------------------------------------------+
 
-Once authors finished coding, both combined the sheets, discussing
-differences and re-coding affected studies until a unanimous result was
-achieved.
+: Table 1. Overview of outcome allocation to moderator group.
+
+The authors compared finalized coding sheets, discussed differences and
+re-coded affected studies until a unanimous result was achieved (see
+Appendix).
 
 ## Risk of bias and publication bias
 
-Risk of bias was assessed using the RoB-2 [@sterne2019]. Given emerged
-data Trim and Fill was used as the most appropriate publication bias
-detection method [@fernandez-castilla2021].
+Risk of bias was assessed using the RoB-2 [@sterne2019] and Trim and
+Fill was used as the publication bias detection
+[@fernandez-castilla2021; @renkewitz2019].
 
 ## Statistical Method
 
 To incorporate all outcomes of interest we used a three level
 meta-analysis[@vandennoortgate2015][@cheung2019], with Robust variance
-estimation (RVE) correction[@hedges2010][@moeyaert2017]. RVE return
-valid confidence intervals in presence of dependent data [@park2019a],
-while the three level model allowed for outcome-level heterogeneity
-investigation [@vandennoortgate2013]. Heterogeneity was estimated using
-*Q* Statistics. Models were fitted with restricted maximum likelihood
-estimation (REML), RVE correction was based on the correction by
-Pustejovsky & Tipton [-@pustejovsky2016].
+estimation (RVE) [@hedges2010; @moeyaert2017]. RVE return valid
+confidence intervals in presence of dependent data [@park2019]. While
+the three level model allowed for outcome-level heterogeneity
+investigation [@vandennoortgate2013], RVE return valid confidence
+intervals in presence of dependent data [@park2019]. Models were fitted
+with restricted maximum likelihood estimation (REML), RVE correction was
+based on Pustejovsky & Tipton [-@pustejovsky2016].
 
-Calculations were done in R [@base] using the package metafor for the
-three level model [@metafor] and the package clubSandwich
-[@clubSandwich] for the RVE correction. The R-Code is available in the
-Appendix
+Calculations were done in R [@rcoreteam2020] using the package metafor
+for the three level model [@viechtbauer2010c] and the package
+clubSandwich [@pustejovsky2021a] for the RVE correction. R Code is
+available on GitHub.
+
+Calculations were done in R (4.1.1) [@rcoreteam2020] using the package
+metafor (Version. X.XXX.) for the three level model [@viechtbauer2010c]
+and the package clubSandwich (Version XXX) [@pustejovsky2021a] for the
+RVE correction. R-Code is available as online supplement.
 
 ## Sensitivity Analysis
 
-We employed two sensitivity analyses: (a) Including Non Suicidal Self
-Injury (NSSI) as an outcome, (b) Excluding suicide cases as an outcome;
-as NSSI [@americanpsychiatricassociation2013a] and suicide cases
-[@joiner2005] maybe qualitatively different from other self harming
-behaviour.
+Given that NSSI [@americanpsychiatricassociation2013]and suicidal
+behaviours [@joiner2005] may differ qualitatively, we employed two
+sensitivity analyses: (a) Including Non-Suicidal Self-Injury (NSSI) as
+an outcome, (b) Excluding suicide cases as an outcome. Deviation from
+Pre-Registered Report
 
 ## Deviation from Pre-Registered Report
 
-Firstly, as the number of included studies was lower than expected the
-originally planned method risked underpowered results. We therefore
-deviated from the protocol by instead combining RVE correction with a
-three-level model, following a current proposition [@pustejovsky2020].
-
-Secondly, we initially wanted to base the publication bias detection
-method on the paper by Renkewitz [-@renkewitz2019], but deviated from
-the preregistration protocol, as a more accurate paper was published
-afterwards [@fernandez-castilla2021]; note that both papers recommend
-Trim and Fill, given emerged data.
+Given most recent developments in meta-analysis research we adapted the
+procedure as follows: Firstly instead of the complex multi-level model ,
+we employed a hybrid model of RVE correction and multilevel method
+[@pustejovsky2021], thereby improving efficiency and reducing risk of
+bias. Secondly, we followed the publication bias detection method
+recommended by Fernández-Castilla et al. [-@fernandez-castilla2021],
+although following the originally planned method [@renkewitz2019] would
+generate the same results.
 
 # Results
 
@@ -226,15 +230,15 @@ source("04_Code.R", local = knitr::knit_global())
 
 ## Emerged Data
 
-We identified 3,287 papers in the databases and an additional 11 studies
+We identified 3,287 papers in the databases and additional 11 studies
 from other sources (see Flow Chart), including `r max(Total$Study_ID)`
-independent studies. The difference between included studies and
-included independent studies is explained by a number of follow up
-studies that used the same sample as their parent study. These follow up
-studies were statistically treated as dependent to their parent. But for
-reporting purposes they were treated as independent studies and as such
-also reported within the flow chart and references. Both authors (J.S &
-K.R) agreed to 89% about the inclusion and exclusion of studies.
+independent studies. The difference between included studies in the Flow
+chart and reported independent studies is explained by follow-up studies
+that use the same sample as their parent study. These follow-up studies
+are reported as independent studies, but because they are statistically
+dependent to their parent, they were treated as dependent within our
+meta-analysis. Further one study included 3 statistically independent
+RCT trials [@franklin2016].
 
 INSERT FIGURE 1. Flow Chart
 
@@ -242,112 +246,116 @@ Overall, `r max(Total$Outcome_ID)` outcomes emerged, with
 `r sum(Total$Thinking)` outcomes of the category thinking, predominantly
 ideation and planning, and
 `r max(Total$Outcome_ID) - sum(Total$Thinking)` outcomes of the category
-acting, predominantly deliberate self harm.
-`r max(Total$Outcome_ID) - sum(Total$Autonomous)` outcomes evaluated
-human involved programs and `r sum(Total$Autonomous)` outcomes evaluated
-autonomous programs. The median exposure time of all interventions was
-`` r op(median(Total$`Duration (weeks)`)) `` weeks, with a range of
-`` r min(Total$`Duration (weeks)`) `` to
-`` r max(Total$`Duration (weeks)`) `` weeks. The median time between
+acting, including studies examining mostly deliberate self-harm,
+self-harm and suicide attempts.
+
+`r max(Total$Outcome_ID) - sum(Total$Autonomous)` outcomes were found in
+the human involved interventions category and `r sum(Total$Autonomous)`
+outcomes were found for autonomous interventions. The median duration of
+studies was `r op(median(Study_avarage$Duration_weeks))` weeks, with a
+range of `r min(median(Total$Duration_weeks))` to
+`r max(median(Total$Duration_weeks))` weeks. The median time between
 post-intervention measures and follow up measures was
-`` r median(Total$`Follow_up Time`, na.rm = TRUE) `` weeks, with a range
-of `` r max(Total$`Follow_up Time`,  na.rm = TRUE) `` weeks to
-`` r min(Total$`Follow_up Time`,  na.rm = TRUE) `` weeks.
+`r median(median(Study_avarage$Follow_up_Time, na.rm=TRUE))` weeks, with
+a range of `r max(Total$Follow_up_Time,  na.rm = TRUE)` weeks to
+`r min(Total$Follow_up_Time,  na.rm = TRUE)` weeks.
 
 The median attrition rate was
-`` r op(median(Total$`Total Attrition (%)`, na.rm= TRUE)) `` % with a
-maximum of `` r max(Total$`Total Attrition (%)`, na.rm=TRUE) `` % and a
-minimum of 0 %. Due to the very different frequencies and types of
-interventions quantitative reporting of utilisation was not seen as
-sensible.
+`r op(median(Study_avarage$Total_Attrition, na.rm=TRUE))` % with a
+maximum of `r max(Study_avarage$Total_Attrition, na.rm=TRUE)` % and a
+minimum of 0 %.\
 
 ### Sample Characteristics
 
-In total the sample consisted of n = `r op0(sum(n_mean_perStudy$x))`,
-with n= `r sum(AggPost$n)` at post-intervention and n=
-`r sum(AggFollow$n)` at follow up, these were to
-`` r op(mean(Total$`Sex_(Female)`)) `` % female and on average
-`` r op(mean(Total$`Age_(mean)`, na.rm = TRUE)) `` years old. The
-youngest mean sample age was
-`` r min(Total$`Age_(mean)`, na.rm = TRUE) `` years, the oldest mean
-sample age was `` r max(Total$`Age_(mean)`, na.rm = TRUE) `` years.
+The studies included a total of `r Postn` at post-intervention
+`r sum(Study_avarageFollow_up$n)` at follow up. Out of all,
+`r op(mean(Study_avarage$Sex_Female))` % female and on average
+`r op(mean(Study_avarage$Age_.mean.,na.rm=TRUE))` (SD=
+`r op(mean(Study_avarage$Age_.SD., na.rm=TRUE))`) years old. In studies
+the youngest reported mean sample age was
+`r op(min(Study_avarage$Age_.mean.,na.rm=TRUE))` (SD= 1.4) years, the
+oldest mean sample age was
+`r op(max(Study_avarage$Age_.mean.,na.rm=TRUE))` (SD= 11.3)years.
 
-Most studies were from the United States (*k=* 10), followed by
-Australia (*k* = 8); a total of *k =* 6 studies originated from non
-westernised educated industrialised democracies (WEIRD).
+Out of a total of n= `r max(Total$Study_ID)` studies, most data was
+retrieved from the United States (*k=* 10), followed by Australia (*k* =
+8); and from non-westernised educated industrialised democracies (WEIRD;
+*k =* 6) countries.
 
 ## Main Analysis
 
 Distance based interventions were effective against suicidal thoughts
-and behaviours, at SMD = `r op(OverallRVECI$beta)`
-CI95%[`r op(OverallRVECI$CI_L)`; `r op(OverallRVECI$CI_U)`];
-Heterogeneity was significant at *Q* (df = `r Overall$dfs`)=
-`r op(Overall$QE)`, *p =* `r op(Overall$QEp)`.
+and behaviours, standardized mean difference (SMD) =
+`r op(OverallRVECI$beta)` CI95%[`r op(OverallRVECI$CI_L)`;
+`r op(OverallRVECI$CI_U)`]; Heterogeneity was significant at *Q* (df =
+`r Overall$dfs`)= `r op(Overall$QE)`, *p =* `r op(Overall$QEp)`.
 
-The moderator thoughts vs. behaviours was significant, as effectiveness
-of distance based interventions against suicidal acts were minimal with
-*SMD=* `r op(Overall.TRVECI$beta[1])`
-CI95%[`r op(Overall.TRVECI$CI_L[1])`; `r op(Overall.TRVECI$CI_U[1])`],
-while interventions aimed at suicidal thinking were more effective
-*SMD=* `r op(Overall.TRVECI$beta[2])`
-CI95%[`r op(Overall.TRVECI$CI_L[2])`; `r op(Overall.TRVECI$CI_U[2])`],
-giving an averaged effectiveness against suicidal thoughts of *SMD =*
-`r op(Overall.TRVECI$beta[1] + Overall.TRVECI$beta[2])`; Heterogeneity
-became insignificant with *Q* (df = `r Overall.T$dfs`) =
-`r op(Overall.T$QE)`, *p =* `r op(Overall.T$QEp)`.
+The moderation analysis was significant, showing that distance based
+programs were (*SMD=* `r op(Overall.TRVECI$beta[2])`
+CI95%[`r op(Overall.TRVECI$CI_L[2])`; `r op(Overall.TRVECI$CI_U[2])`])
+more effective against suicidal thoughts than suicidal behaviours. The
+average effectiveness against suicidal thoughts was *SMD=*
+`r op(Overall.T2RVECI$beta[1])` CI95%[`r op(Overall.T2RVECI$CI_L[1])`;
+`r op(Overall.T2RVECI$CI_U[1])`] compared to *SMD=*
+`r op(Overall.TRVECI$beta[1])` CI95%[`r op(Overall.TRVECI$CI_L[1])`;
+`r op(Overall.TRVECI$CI_U[1])`] for suicidal behaviours. Heterogeneity
+was non-significant *Q* (df = `r Overall.T$dfs`) = `r op(Overall.T$QE)`,
+*p =* `r op(Overall.T$QEp)`. See Appendix C for study average effects
+against suicidal thoughts and suicidal acts.
 
-For Controlgroup comparisons two groups could be compared: TAU versus
-waitlist and attention placebo controlgroups; results of analysis
-differentiating waitlist and attention placebo controlgroups returned
-statistically unreliable results. Comparing both groups, waitlist and
-attention placebo controlgroups returned significantly stronger effects
-with *SMD=* `r op(Overall.CRVECI$beta[1])`
-CI95%[`r op(Overall.CRVECI$CI_L[1])`; `r op(Overall.CRVECI$CI_U[1])`],
-compared to these studies using a TAU controlgroup were around *SMD=*
-`r op(Overall.CRVECI$beta[2])` CI95%[`r op(Overall.CRVECI$CI_L[2])`;
-`r op(Overall.CRVECI$CI_U[2])`], less effective; heterogeneity remained
-significant = *Q* (df = `r OverallC$dfs`) = `r op(OverallC$QE)`, *p =*
-`r op(OverallC$QEp)`.
+Given small study numbers, the comparison of waitlist and attention
+placebo groups showed statistically not trustworthy results according to
+the profile likelihood plots.
 
-Graphically inspecting both significant moderators revealed that
-suicidal acts and suicidal thoughts were unevenly distributed between
-studies using different controlgroups (see figure 2). An exploratory
-analysis including both moderators revealed that Controlgroups were no
-longer significant, when accounting for suicidal acts and suicidal
-thoughts, with *SMD=* `r op(Overall.TRVECITT$beta[3])`
-CI95%[`r op(Overall.TRVECITT$CI_L[3])`;
-`r op(Overall.TRVECITT$CI_U[3])`]. While suicidal acts and suicidal
-thoughts remained a significant moderator for the effectiveness of
-interventions, with *SMD =* `r op(Overall.TRVECITT$beta[2])`
-CI95%[`r op(Overall.TRVECITT$CI_L[2])`;
-`r op(Overall.TRVECITT$CI_U[2])`]; heterogeneity was insignificant = *Q*
-(df = `r Overall.TT$dfs`) = `r op(Overall.TT$QE)`, *p =*
-`r op(Overall.TT$QEp)`.
+Therefore, waitlist and attention placebo were combined into a combined
+control group, and compared to TAU.
+
+Comparing the combined control-group vs. TAU, TAU groups were
+significantly less impacted by distance based interventions (S*MD=*
+`r op(Overall.CRVECI$beta[1])` CI95%[`r op(Overall.CRVECI$CI_L[1])`;
+`r op(Overall.CRVECI$CI_U[1])`]), than studies using a waitlist or
+attention placebo designs. Heterogeneity remained significant = *Q* (df
+= `r OverallC$dfs`) = `r op(OverallC$QE)`, *p =* `r op(OverallC$QEp)`.
+
+Covariance was investigated by simultaneous visualization of
+control-group and outcome category. Suicidal behaviours and suicidal
+thoughts were unevenly distributed between different control-groups (see
+figure 2).
+
+An exploratory analysis including both moderators was implemented.
+
+When including both moderators, the difference between TAU and the
+combined control group was non- significant, with *SMD=*
+`r op(Overall.TRVECITT$beta[3])` CI95%[`r op(Overall.TRVECITT$CI_L[3])`;
+`r op(Overall.TRVECITT$CI_U[3])`], but suicidal acts and suicidal
+thoughts remained a significant moderator, with *SMD =*
+`r op(Overall.TRVECITT$beta[2])` CI95%[`r op(Overall.TRVECITT$CI_L[2])`;
+`r op(Overall.TRVECITT$CI_U[2])`] in favour of suicidal thoughts;
+heterogeneity was not significant = *Q* (df = `r Overall.TT$dfs`) =
+`r op(Overall.TT$QE)`, *p =* `r op(Overall.TT$QEp)`.
 
 INSERT: FIGURE 2. Funnel Plot
 
-Effectiveness of distance based interventions decreased insignificantly
-between Post Intervention and Follow up Measurements with *SMD =*
-`r op(Overall.FCRVECI$beta[2])` CI95%[`r op(Overall.FCRVECI$CI_L[2])`;
-`r op(Overall.FCRVECI$CI_U[2])`]; heterogeneity was significant = *Q*
-(df = `r OverallF$dfs`) = `r op(OverallF$QE)`, *p =*
-`r op(OverallF$QEp)`.
+Effectiveness of distance based interventions decreased between
+time-points at *SMD =* `r op(Overall.FCRVECI$beta[2])`
+CI95%[`r op(Overall.FCRVECI$CI_L[2])`; `r op(Overall.FCRVECI$CI_U[2])`]
+non-significantly. Heterogeneity was significant = *Q* (df =
+`r OverallF$dfs`) = `r op(OverallF$QE)`, *p =* `r op(OverallF$QEp)`.
 
-Human involvement had an insignificant negative impact on effectiveness
-*SMD =* `r op(Overall.IRVECI$beta[2])`
-CI95%[`r op(Overall.IRVECI$CI_L[2])`; `r op(Overall.IRVECI$CI_U[2])`];
-heterogeneity was significant = *Q* (df = `r Overall.I$dfs`) =
-`r op(Overall.I$QE)`, *p =* `r op(Overall.I$QEp)`.
+Human involvement had with *SMD=* `r op(Overall.IRVECI$beta[2])`
+CI95%[`r op(Overall.IRVECI$CI_L[2])`; `r op(Overall.IRVECI$CI_U[2])`] an
+non-significant negative impact on effectiveness. Heterogeneity was
+significant = *Q* (df = `r Overall.I$dfs`) = `r op(Overall.I$QE)`, *p =*
+`r op(Overall.I$QEp)`.
 
 ## Sensitivity Analysis
 
-Including NSSI in the moderator analysis of thinking vs. behaviour
-negligibly impacted the results *SMD* = `r op(Overall.TRVE2$beta[1])` ,
-compared to the analysis without NSSI included: *SMD =*
-`r op(Overall.TRVE$beta[1])`. Excluding suicides lead to a negligible
-reduction in effectiveness as well, comparing effectiveness without
-suicides at *SMD* = `r op(Overall.TSRVE$beta[1])`, to the analysis
-including suicide cases *SMD =* `r op(Overall.TRVE$beta[1])`.
+*Both, inclusion of NSSI (k = 6) and exclusion of suicide studies (k= 4)
+had negligible impacts on the subgroup of behaviour outcomes. Inclusion
+of NSSI increased the effectiveness SMD=* `r op(Overall.TRVE2$beta[1])`
+to *SMD*= `r op(Overall.TRVE$beta[1])`. and *xclusion of suicide studies
+decreased effectiveness from SMD =* `r op(Overall.TRVE$beta[1])` to
+*SMD*= `r op(Overall.TSRVE$beta[1])`.
 
 ## Publication Bias and Risk of Bias Assessment
 
@@ -358,78 +366,223 @@ INSERT: FIGURE 3. Rob-2 Study Quality
 
 # Discussion
 
-We investigated the effectiveness of distance based interventions in
-reducing suicidal thoughts and behaviour. On average distance based
-interventions reduced suicidal thoughts and behaviours. The Quality of
-evidence was good, given a considerable amount of RCT and a notable
-number of high and medium quality studies.
+In this meta-analysis we investigated the effectiveness of distance
+based programs in reducing suicidal thoughts and behaviours. On average
+distance based programs reduced both suicidal thoughts and behaviours.
+The quality of evidence was good, given a considerable number of RCTs,
+with a notable number of high and medium quality studies and no observed
+publication bias.
 
 ### Contextualising results with other Meta-Analyses
 
-Distance based interventions against suicidal behaviours and
-face-to-face therapeutic interventions against self harming behaviour
-and suicide attempts [@ougrin2015] were comparatively effective. While
-the mean score of psychoanalytical face-to-face interventions
-[@briggs2019] was three to six times higher, it remained statistically
-insignificant. That interventions can be three to six times more
-effective than distance based interventions and remain statistically
-insignificant shows how low effectiveness against suicidal behaviours
-were.
+We showed that suicidal behaviours were reduced
+(`r op(Overall.T2RVECI$beta[1])` CI95%[`r op(Overall.T2RVECI$CI_L[1])`;
+`r op(Overall.T2RVECI$CI_U[1])`]) by distance based programs. These
+reductions were in line with face-to-face therapeutic interventions. One
+recent meta-analysis on face-to-face therapeutic interventions
+[@ougrin2015] reported a reduction of *SMD =* -0.11 CI95% [-0.38; 0.15]
+for suicide attempts and a current meta-analysis [@kothgassner2020]
+reported a reduction of SMD = -0.13 CI95% [-0.22;-0.04] for self harm.
+In contrast to these short-term interventions, a meta-analysis of
+higher-frequency and long-term psychoanalytic face-to-face interventions
+[@briggs2019] reported stronger results, for suicide attempts *SMD =*
+-0.24 CI95%[−0.50 to 0.03] and for self harm between *SMD*= -0.73 CI95%
+[-1.22;-0.22] and *SMD*= -0.15 CI95% [-3.88;0.09]; depending on how self
+harm was measured. Given that most distance based programs had very low
+frequencies (e.g. letter sent every few months), while Ougrin et al.
+[-@ougrin2015] and Kothgassner et al. [-@kothgassner2020] mostly
+included low frequency face-to-face interventions and Briggs et al.
+[-@briggs2019] mostly included higher frequency interventions. Frequency
+of intervention seems to be a moderating factor for effectiveness.
 
-For suicidal thoughts distance based interventions and face-to-face
-interventions against suicidal ideation[@bornheimer2020] were again
-comparatively effective. Although the generalizability of the
-face-to-face meta-analysis is limited, as only psychotic patients were
-included in the analysis.
+Although distance-based interventions seem to have a small effect size
+in comparison to face-to face interventions, especially high-frequency
+long-term interventions, they might have a role in the prevention of
+suicidal behaviour due to their availability, scalability and
+cost-efficacy. Even more, it remains to be analysed, whether the higher
+effectiveness of face-to-face interventions, which is based on rather
+small samples, would remain superior when their power would be
+increased. For example, although the effect size of the meta-analysis by
+Briggs et al. [-@briggs2019] seems four times higher than the effect
+size of distance based interventions, our effect is more precise and
+statistically significant.
 
-Based on these results Distance based interventions fit perfectly into
-the role of low cost, low barrier treatments against suicidal thoughts.
-Additionally, as autonomous programs were as effective as human involved
-programs, including internet delivered cognitive behavioural treatments
-(iCBT) [@buscher2020c], autonomous distance based interventions could
-provide treatment opportunities to all 138 Million individuals
-experiencing suicidal ideation.
+When we also draw on the effect-size estimates and their confidence
+intervals, we can observe the clinical potential of an intervention. For
+example, the effect size reported by Briggs et al. (2019) against
+suicide attempts, expressed as Number Needed to Treat, (NNT) is = 7.4
+CI95% [Inf; 3.6], means that the interventions may be ineffective
+(Infinite number needed), but it could help up to every fourth person.
+In contrast, our results of distance based programs, expressed as *NNT
+=* 29.5 CI95% [59; 22.1] means that a reduction will occur with 95%
+certainty, but *at best* only every twenty-second person will be helped
+and on average one of 30 interventions will be helpful. Given the
+seriousness of suicidal behaviours and the currently low effectiveness
+of interventions against it, more research on potentially more effective
+treatment is needed. For example, we suggest more research into high
+frequency interventions and on the question if the trend of larger
+effect-sizes in psychoanalytical therapies [@briggs2019] and DBT-A
+therapies [@kothgassner2020] is retained, given more data. However,
+despite the low effect of distance based programs on suicidal behaviour,
+they nevertheless might have a role in the spectrum of preventive
+approaches. Especially the fact of high barriers to treatment seeking,
+especially to face-to-face treatment, are an argument to disseminate
+distance based interventions as a means for involvement where other
+treatment is not available or not accepted by those in need.
+
+### 
+
+### Effectiveness of distance based programs for suicidal thoughts 
+
+Similarly to suicidal behaviours, suicidal thoughts were reduced by
+distance based programs (`r op(Overall.T2RVECI$beta[1])`
+CI95%[`r op(Overall.T2RVECI$CI_L[1])`;
+`r op(Overall.T2RVECI$CI_U[1])`]). The result is line with face-to-face
+interventions according to Kothgassner et al. [-@kothgassner2020] (SMD =
+-0.31 CI95% [-0.5; -0.12]). Comparing the intervention-type subgroups in
+Kothgassner et al. [-@kothgassner2020], to our results, some
+face-to-face interventions like group therapy (SMD = 0.01
+CI95%[-0.17;0.18]) and Brief Interventions (SMD = -0.12CI95%[-0.27;0.03]
+tended to be less effective, with other forms of intervention like DBT-A
+(-0.48 CI95%[-0.8;-0.17] tending to be more effective; but none differed
+significantly.
+
+Distance based programs can be applied on multiple levels of the stepped
+care model for suicide care [@jobes2018]. This model includes 5 levels
+of intervention, ranging from least restrictive Telephone (level 1),
+Brief interventions (2), outpatient care (3), partial hospitalisation
+(4) to most restrictive interventions like inpatient care/full
+hospitalisation(5).
+
+As such both the least costly and restrictive level of stepped care,
+'telephone interventions and follow ups' and the second least costly and
+restrictive level, 'Brief interventions and follow ups' can be
+supplemented or supplanted by distance based interventions. Further,
+given that effect-sizes of distance based interventions were similar to
+other face-to-face interventions, even the level 3- outpatient care, can
+be supplemented with distance based programs. In summary, distance based
+interventions are capable to supply evidence-based, least-restrictive,
+and cost effective help. Distance based programs can even be a
+substitute to outpatient care, where it is not immediately available or
+not used by individuals seeking help.
 
 ### Research recommendations
 
-Development should be focused on autonomous distance based interventions
-that provide low cost community level support against suicidal thoughts.
-These programs should include severity measurements, which give a strong
-recommendation to seek face-to-face treatment, if the user experiences
-suicidal behaviours, including self harm.
+According to our results, autonomous distance based interventions (ADBI)
+(SMD= `r op(Overall.I2RVECI$beta[1])`
+CI95%[`r op(Overall.I2RVECI$CI_L[1])`;
+`r op(Overall.I2RVECI$CI_U[1])`]), were as effective as human involved
+interventions (SMD= `r op(Overall.IRVECI$beta[1])`
+CI95%[`r op(Overall.IRVECI$CI_L[1])`; `r op(Overall.IRVECI$CI_U[1])`]).
+But ADBI promise a better scalability [@batterham2015], making them more
+feasible for studies with larger sample sizes and replication studies.
+
+Studies with large sample sizes or study sets using close replications
+are needed, as only these allow us to control for the characteristics of
+distance based interventions and by such, to understand which components
+are most effective.
+
+In general, the assumptions about Distance based interventions (DBI) for
+mental health often lack evidence [@musiat2014]. For example, some
+stated advantages of DBIs in suicide prevention are still unproven
+assumptions, for example that 24h availability of such an intervention
+might be advantageous. The best proven assumptions derived from
+meta-analytical evidence are delivered for cost effectiveness,
+acceptability and satisfaction of DBIs. However, this evidence is
+available for mental health interventions in general [@eze2020;
+@musiat2014], but not for the primary endpoint of suicidal behaviour or
+thoughts.
+
+In this sense, the development of well powered ADBIs for suicide
+prevention is still is in its infancy and needs to addressed in future
+more scrupulously.
 
 ### Implications for clinical practice
 
-Distance based interventions give psycho-social service providers a
-treatment that they can offer instantly, thereby reducing the number of
-delayed or aborted treatments. Given that all interventions showed
-higher effectiveness against suicidal thoughts than suicidal acts,
-including face-to-face treatment, offering quick and early access to
-help is crucial. Furthermore some who would otherwise perceive their
-need as insufficient to seek treatment [@bruffaerts2011], might be
-convinced to use autonomous intervention, given the lower personal cost
-and effort. Concluding: (Autonomous) distance based interventions are
-clearly better than no treatment and therefore should always be seen as
-a treatment option for an early low intensity intervention.
+Suicide research shows that all interventions, face-to-face-,
+Human-Involved Distance Based- as well as autonomous Interventions are
+effective in reducing suicide. Further, all of these interventions were
+more effective against suicidal thoughts than against suicidal acts.
+Therefore, there is a strong argument for the implementation of such
+interventions among individuals with suicide ideation, as recently
+discussed by Joiner and Jobs[-@jobes2019] . The availability of
+face-to-face interventions in mental health clinics and among individual
+mental health professionals such as psychiatrists and psychotherapists
+is unevenly distributed geographically [@kapusta2010;@pirkola2009] and
+may be limited in pandemic containment efforts against Covid-19. The
+resulting unavailability may be compensated for by ADBIs, which are not
+affected by geographic distribution or lockdowns.In addition the reality
+of psychiatric treatment includes high costs for individuals or the
+public health system [@wittchen2011a], depending on whether psychiatric
+treatment is covered by insurance. This often results in long waiting
+times for patients in need [@zepf2003]. In both cases, ADBIs can help
+mitigate the negative effects of barriers to help seeking, by offering
+an intermediate alternative, thereby bridging waiting times and at lower
+costs. Finally ADBI can help to scale up mental health services
+especially in countries with limited mental health expenditures and low
+resources, such as low and middle income countries (LMIC), as called by
+Chisholm et al. [-@chisholm2007] and thereby contribute to the
+Sustainable Mental Health Development Goals, set out be the UN
+[@patel2018].
 
 ## Limitations
 
-Given the comprehensive approach of this analysis some limitations must
-be noted.
+Given our comprehensive approach, some limitations should be noted.
 
-First, heterogeneity was high, but the moderator thinking vs. acting
-explained a substantial degree of heterogeneity and, given the large
-number of different terms, scales, countries and populations subsumed
-within a single analysis, the heterogeneity was surprisingly low.
+Firstly we did not include any grey literature. This can cause selection
+bias, as the publication bias suppresses non-significant results. But,
+as RCT studies in a multidisciplinary field (clinical psychologists, IT
+experts, physicians...) are very costly, expecting grey literature
+research is rather unreasonable. And non-publication due to reporting
+non-significant results is also unlikely, given that almost all studies
+included non-significant results. This decision reduced work load
+notably and is in line with previous meta-analyses to this field
+[@torok2020; @milner2015 ].
 
-Secondly, given the power demanding model and the total number of
-emerged studies, results might be underpowered, which potentially leads
-to too narrow confidence intervals [@tanner-smith2014]. Nonetheless we
-observed no indications for notably lacking power in any analysis that
-was presented.
+The second potential limitation is that most studies included in this
+meta-analysis are already covered by different previously published
+meta-analyses [@torok2020; @milner2015 ]. However, these previously
+published meta-analyses used a method - Hedges-Olkin meta-analysis -
+which can only include independent data. In contrast our method
+(Multi-Level Meta-Analysis) allows inclusion of non-independent data, by
+this all relevant data from a study can be utilized [@cheung2019].
+
+Utilizing all relevant data gives multiple advantages, foremost higher
+precision and less bias risk (A) Precision and non-independent data,
+including multiple non independent data points per study increases
+precision. Further it allows important moderator analysis to be
+implemented in one model, which allows to weigh evidence according to
+its information value. In contrast previous meta-analysis had to use
+independent subgroup analysis, which lowers precision notably and only
+allows for an indirect comparisons of effectiveness. (B) Bias risk, our
+meta-analysis is the first to include all relevant outcomes. In contrast
+previous Hedges-Olkin meta-analyses [@torok2020; @milner2015 ] were
+forced to select one representative outcome per independent analysis.
+Due to this potential of a selection bias can therefore not be excluded
+in these older meta-analyses. Based on these points and the fact that we
+updated and broaden the systematic searches of previous meta-analysis,
+the current meta-analysis substantially adds to the research field.
+
+But while a multilevel meta-analysis gives all the above stated
+advantages, it also produces potential limitations. First The employed
+method requires more studies to reach adequate power, than hedges Olkin
+meta-analysis. And the amount of included studies was low, in turn the
+analysis might have been underpowered [@tanner-smith2014]. But results
+were reliable, based on Profile Likelihood Plots of metafor and the
+reported degrees of freedom reported by the RVE Correction
+[@pustejovsky2016]. Second, RVE corrected models do not report
+heterogeneity estimations, therefore heterogeneity estimations of the
+MLM were reported. However *Q-* test results are not biased by
+dependency and therefore statistically valid, while power of the
+*Q*-Test was sufficient [@maeda2016].
+
+Summarizing: Distance based interventions, particularly autonomous
+distance based interventions are an effective and cheap way of
+supporting treatment, specially against suicidal thoughts and in
+situations where availability of face-to-face treatments are limited.
 
 nocite:\|
-@amadeo2015b,@batterham2018a,@beautrais2010,@bertolote2010,@bush2017,@carter2005,@carter2007,@carter2013,@cedereke2002,@christensen2013a,@comtois2019,@dejaegere2019,@evans2005,@evans1999,@franklin2016,@guille2015,@hassanian-moghaddam2011,@hassanian-moghaddam2017a,@hetrick2017,@hill2019,@hooley2018,@kasckow2016,@luxton2020,@motto2001,@mouaffak2015,@mousavi2014,@niederkrotenthaler2020a,@oconnor2017a,@robinson2012,@rodante2020c,@tighe2017,@vaiva2018,@vaiva2006,@vanspijker2014,@vanspijker2018,@wilks2018a,@wilksch2019,@wei2013
+@amadeo2015,@batterham2018,@beautrais2010,@bertolote2010,@bush2017,@carter2005,@carter2007,@carter2013,@cedereke2002,@christensen2013,@comtois2019,@dejaegere2019,@evans2005,@evans1999,@franklin2016,@guille2015,@hassanian-moghaddam2011,@hassanian-moghaddam2017,@hetrick2017,@hill2019,@hooley2018,@kasckow2016,@luxton2020,@motto2001,@mouaffak2015,@mousavi2014,@niederkrotenthaler2020,@oconnor2017,@robinson2012,@rodante2020,@tighe2017,@vaiva2018,@vaiva2006,@vanspijker2014,@vanspijker2018,@wilks2018,@wilksch2019,@wei2013
 
 # References
 

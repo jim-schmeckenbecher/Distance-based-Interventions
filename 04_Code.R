@@ -12,39 +12,25 @@ Total <- read_delim("03_Data.csv",
 
 Total <- subset(Total, NSSI ==0 )
 
+#Study Aggregate Data for descriptive Statistics
 
-#Descriptive statistics over emerged data.####
+# Independend of time
+Total2 <- escalc(yi=d, vi=v, data=Total )
+Study_avarage<- aggregate(Total2, cluster= Study_ID, struct = "CS", rho= 0.6, na.rm=TRUE)
 
-# n of participants at:
-# both time-points
-
-n_mean_perStudy<- aggregate(x = Total$n,               
-                            by = list(Total$Study_ID),              
-                            FUN = mean)
-
-n.total <- sum(n_mean_perStudy$x)
-
-
-
-# n of participants at:
-# - Post-Intervention
-Post <- subset(Total, Follow_up == 0 )
-
+#At Post 
+Post <- subset(Total, Follow_up == 0)
 Post2 <- escalc(yi=d, vi=v, data=Post )
+Study_avaragePost<- aggregate(Post2, cluster= Study_ID, struct = "CS", rho= 0.6, na.rm=TRUE)
 
-AggPost<- aggregate(Post2, cluster= Study_ID, struct = "CS", rho= 0.6)
+# At Follow up
+Follow_up <- subset(Total, Follow_up == 1)
+Follow_up2 <- escalc(yi=d, vi=v, data=Follow_up )
+Study_avarageFollow_up<- aggregate(Follow_up2, cluster= Study_ID, struct = "CS", rho= 0.6, na.rm=TRUE)
 
-sum(AggPost$n)
+# n at Postintervention
+Postn<- sum(Study_avaragePost$n)
 
-# n of participants at:
-# - Follow up
-Follow <- subset(Total, Follow_up == 1 )
-
-Follow2 <- escalc(yi=d, vi=v, data=Follow )
-
-AggFollow<- aggregate(Follow2, cluster= Study_ID, struct = "CS", rho= 0.6)
-
-sum(AggFollow$n)
 
 #Main Analysis####
 
@@ -93,8 +79,8 @@ profile(Overall.T)
 
 #RVE
 mfor_CR2 <- vcovCR(Overall.T2, type = "CR2")
-Overall.TRVE <- coef_test(Overall.T2, vcov = mfor_CR2, test = ("Satterthwaite"))
-Overall.TRVECI<- conf_int(Overall.T2, vcov = mfor_CR2)
+Overall.T2RVE <- coef_test(Overall.T2, vcov = mfor_CR2, test = ("Satterthwaite"))
+Overall.T2RVECI<- conf_int(Overall.T2, vcov = mfor_CR2)
 
 
 #_Mod: Controlgroup (TAU vs. waitlist and Attention_Placebo)####
@@ -116,8 +102,6 @@ Overall.CRVECI <- conf_int(OverallC, vcov = mfor_CR2)
 
 Overall.I <- rma.mv(d,v, mods= ~Autonomous, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.I)
-
-
 
 
 #Optimization Control
@@ -146,8 +130,8 @@ profile(Overall.I2)
 
 #RVE Correction
 mfor_CR2 <- vcovCR(Overall.I2, type = "CR2")
-Overall.IRVE<- coef_test(Overall.I2, vcov = mfor_CR2, test = ("Satterthwaite"))
-Overall.IRVECI2 <- conf_int(Overall.I2, vcov = mfor_CR2)
+Overall.I2RVE<- coef_test(Overall.I2, vcov = mfor_CR2, test = ("Satterthwaite"))
+Overall.I2RVECI2 <- conf_int(Overall.I2, vcov = mfor_CR2)
 
 
 
@@ -230,7 +214,6 @@ for (i in 1:nrow(Total)) {
   
 }
 
-
 #basic plot
 funnel(Overall, pch =Total$pch, legend= TRUE, xlab = "Cohens d")
 
@@ -241,7 +224,6 @@ gendA<- legend(x = "topright",
 
 
 # Caterpiller Plot  
-
 
 forest(Overall.T,
        xlim=c(-2.5,3.5),        ### adjust horizontal plot region limits
@@ -260,22 +242,6 @@ legendPrePost<- legend(x = "right",
 
 viz_forest(x =Overall.T)
 
-sum(Total$Thinking)
-
-sum(n_mean_perStudy$x)
-TotalAggr<- escalc(yi=d, vi=v, data = Total)
-Study_LEvel_DATA<- aggregate(TotalAggr, cluster=Study_ID, struct= "CS" , rho = 0.6)
-
-mean(Study_LEvel_DATA$Age_.mean., na.rm=TRUE)
-
-mean(Study_LEvel_DATA$Age_.SD., na.rm=TRUE)
-
-mean(Study_LEvel_DATA$Sex_.Female., na.rm=TRUE)
-
-x<- (Study_LEvel_DATA$Age_.SD.)
-
-sum(Total$Suicide)
-
 # Aggregated by Thougths and Acts 
 
 Thinks<- subset(Total, Total$Thinking ==1)
@@ -287,8 +253,6 @@ Acts <- escalc(yi=d, vi=v, data = Acts)
 Total.Acts <- aggregate(Acts, cluster = Study_ID, struct = "CS", rho =0.6)
 
 Study_avarage<- rbind(Total.Thinking,Total.Acts)
-
-
 
 Study_avarage$Study_ID <- 1:45
 
@@ -313,5 +277,6 @@ viz_forest(Avarage_effect,
            study_labels =Study_avarage$ST_ID, 
            study_table = study_table,
            annotate_CI = TRUE)
+
 
 
