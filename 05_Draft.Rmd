@@ -3,6 +3,7 @@ title: "Distance based suicide Intervention programs, a multi-level Meta-Analysi
 author: "Jim Schmeckenbecher, Katrin Rattner, Robert Cramer, Paul Plener, Anna Baran, Nestor Kapusta"
 output: word_document
 bibliography: 06_references.bib
+annotate_references: yes
 csl: apa6.csl
 after_body: appendix.md
 header-includes:
@@ -18,7 +19,6 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 op0 = function(x, d=0) sprintf(paste0("%1.",d,"f"), x) 
 op = function(x, d=2) sprintf(paste0("%1.",d,"f"), x) 
-
 ```
 
 # Abstract
@@ -151,24 +151,7 @@ weeks, the participant attrition rate, the follow up time, standard mean
 difference (*SMD)* and variance of *SMD*. In addition, all outcomes were
 coded for the moderation analysis into subgroups (see Table 1).
 
-TABLE 1.
-
-+-----------+-----------------------------------------------------------+
-| Moderator | **Outcome Name**                                          |
-| group     |                                                           |
-+===========+===========================================================+
-| Acts      | Suicide, suicide attempts, self harming behaviours.       |
-+-----------+-----------------------------------------------------------+
-| Thoughts  | Suicidal thoughts, suicidal ideation, suicide plans.      |
-+-----------+-----------------------------------------------------------+
-| Human     | Phone calls, cognitive behavioural treatment,             |
-| involved  | personalized letters or personalized e-mails.             |
-+-----------+-----------------------------------------------------------+
-| A         | Applications, websites, non-individualized letters or     |
-| utonomous | non-individualized e-mails.                               |
-+-----------+-----------------------------------------------------------+
-
-: Table 1. Overview of outcome allocation to moderator group.
+[***Insert TABLE 1***]{.ul}
 
 The authors compared finalized coding sheets, discussed differences and
 re-coded affected studies until a unanimous result was achieved (see
@@ -240,7 +223,7 @@ dependent to their parent, they were treated as dependent within our
 meta-analysis. Further one study included 3 statistically independent
 RCT trials [@franklin2016].
 
-INSERT FIGURE 1. Flow Chart
+[***INSERT FIGURE 1. Flow Chart***]{.ul}
 
 Overall, `r max(Total$Outcome_ID)` outcomes emerged, with
 `r sum(Total$Thinking)` outcomes of the category thinking, predominantly
@@ -288,7 +271,7 @@ Distance based interventions were effective against suicidal thoughts
 and behaviours, standardized mean difference (SMD) =
 `r op(OverallRVECI$beta)` CI95%[`r op(OverallRVECI$CI_L)`;
 `r op(OverallRVECI$CI_U)`]; Heterogeneity was significant at *Q* (df =
-`r Overall$dfs`)= `r op(Overall$QE)`, *p =* `r op(Overall$QEp)`.
+`r Overall$ddf[[1]]`)= `r op(Overall$QE)`, *p =* `r op(Overall$QEp)`.
 
 The moderation analysis was significant, showing that distance based
 programs were (*SMD=* `r op(Overall.TRVECI$beta[2])`
@@ -299,9 +282,9 @@ average effectiveness against suicidal thoughts was *SMD=*
 `r op(Overall.T2RVECI$CI_U[1])`] compared to *SMD=*
 `r op(Overall.TRVECI$beta[1])` CI95%[`r op(Overall.TRVECI$CI_L[1])`;
 `r op(Overall.TRVECI$CI_U[1])`] for suicidal behaviours. Heterogeneity
-was non-significant *Q* (df = `r Overall.T$dfs`) = `r op(Overall.T$QE)`,
-*p =* `r op(Overall.T$QEp)`. See Appendix C for study average effects
-against suicidal thoughts and suicidal acts.
+was non-significant *Q* (df = `r Overall.T$ddf[[1]]`) =
+`r op(Overall.T$QE)`, *p =* `r op(Overall.T$QEp)`. See Appendix C for
+study average effects against suicidal thoughts and suicidal acts.
 
 Given small study numbers, the comparison of waitlist and attention
 placebo groups showed statistically not trustworthy results according to
@@ -315,7 +298,8 @@ significantly less impacted by distance based interventions (S*MD=*
 `r op(Overall.CRVECI$beta[1])` CI95%[`r op(Overall.CRVECI$CI_L[1])`;
 `r op(Overall.CRVECI$CI_U[1])`]), than studies using a waitlist or
 attention placebo designs. Heterogeneity remained significant = *Q* (df
-= `r OverallC$dfs`) = `r op(OverallC$QE)`, *p =* `r op(OverallC$QEp)`.
+= `r OverallC$ddf[[1]]`) = `r op(OverallC$QE)`, *p =*
+`r op(OverallC$QEp)`.
 
 Covariance was investigated by simultaneous visualization of
 control-group and outcome category. Suicidal behaviours and suicidal
@@ -331,22 +315,23 @@ combined control group was non- significant, with *SMD=*
 thoughts remained a significant moderator, with *SMD =*
 `r op(Overall.TRVECITT$beta[2])` CI95%[`r op(Overall.TRVECITT$CI_L[2])`;
 `r op(Overall.TRVECITT$CI_U[2])`] in favour of suicidal thoughts;
-heterogeneity was not significant = *Q* (df = `r Overall.TT$dfs`) =
+heterogeneity was not significant = *Q* (df = `r Overall.TT$ddf[[1]]`) =
 `r op(Overall.TT$QE)`, *p =* `r op(Overall.TT$QEp)`.
 
-INSERT: FIGURE 2. Funnel Plot
+[***INSERT: FIGURE 2. Funnel Plot***]{.ul}
 
 Effectiveness of distance based interventions decreased between
 time-points at *SMD =* `r op(Overall.FCRVECI$beta[2])`
 CI95%[`r op(Overall.FCRVECI$CI_L[2])`; `r op(Overall.FCRVECI$CI_U[2])`]
 non-significantly. Heterogeneity was significant = *Q* (df =
-`r OverallF$dfs`) = `r op(OverallF$QE)`, *p =* `r op(OverallF$QEp)`.
+`r OverallF$ddf[[1]]`) = `r op(OverallF$QE)`, *p =*
+`r op(OverallF$QEp)`.
 
 Human involvement had with *SMD=* `r op(Overall.IRVECI$beta[2])`
 CI95%[`r op(Overall.IRVECI$CI_L[2])`; `r op(Overall.IRVECI$CI_U[2])`] an
 non-significant negative impact on effectiveness. Heterogeneity was
-significant = *Q* (df = `r Overall.I$dfs`) = `r op(Overall.I$QE)`, *p =*
-`r op(Overall.I$QEp)`.
+significant = *Q* (df = `r Overall.I$ddf[[1]]`) = `r op(Overall.I$QE)`,
+*p =* `r op(Overall.I$QEp)`.
 
 ## Sensitivity Analysis
 
@@ -362,7 +347,7 @@ decreased effectiveness from SMD =* `r op(Overall.TRVE$beta[1])` to
 Risk of bias of all *independent* studies was mixed (see Figure 3.).
 Using Trim and Fill, no publication bias could be observed.
 
-INSERT: FIGURE 3. Rob-2 Study Quality
+[***INSERT: FIGURE 3. Rob-2 Study Quality***]{.ul}
 
 # Discussion
 
@@ -432,7 +417,7 @@ treatment is not available or not accepted by those in need.
 
 ### 
 
-### Effectiveness of distance based programs for suicidal thoughts 
+### Effectiveness of distance based programs for suicidal thoughts
 
 Similarly to suicidal behaviours, suicidal thoughts were reduced by
 distance based programs (`r op(Overall.T2RVECI$beta[1])`
@@ -508,7 +493,7 @@ interventions among individuals with suicide ideation, as recently
 discussed by Joiner and Jobs[-@jobes2019] . The availability of
 face-to-face interventions in mental health clinics and among individual
 mental health professionals such as psychiatrists and psychotherapists
-is unevenly distributed geographically [@kapusta2010;@pirkola2009] and
+is unevenly distributed geographically [@kapusta2010; @pirkola2009] and
 may be limited in pandemic containment efforts against Covid-19. The
 resulting unavailability may be compensated for by ADBIs, which are not
 affected by geographic distribution or lockdowns.In addition the reality
@@ -588,6 +573,32 @@ nocite:\|
 
 ::: {#refs}
 :::
+
+\newpage
+
+Table 1.
+
+| Moderator group | **Outcome Name**                                                                            |
+|-----------------|---------------------------------------------------------------------------------------------|
+| Acts            | Suicide, suicide attempts, self harming behaviours.                                         |
+| Thoughts        | Suicidal thoughts, suicidal ideation, suicide plans.                                        |
+| Human involved  | Phone calls, cognitive behavioural treatment, personalized letters or personalized e-mails. |
+| A utonomous     | Applications, websites, non-individualized letters or non-individualized e-mails.           |
+
+\newpage
+
+![Figure 1. Flow Chart of all
+studies](01_Plots/INtervention%20paper_FLOW%20CHART_NEW.pdf)
+
+-\> Note: Used .pdf potentially other form must be used.
+
+![Figure 2. Funnel Plot, including all outcomes according to moderator
+type](01_Plots/Rplot2.png)
+
+\newpage
+
+![Figure 3. Quality Assesment of all independend
+studies](01_Plots/RoB-II.pdf)
 
 # Appendix
 

@@ -38,6 +38,7 @@ Postn<- sum(Study_avaragePost$n)
 Overall <- rma.mv(d, v, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall)
 
+
 #Optimization Control
 par(mfrow=c(2,4))
 profile(Overall)
@@ -131,7 +132,7 @@ profile(Overall.I2)
 #RVE Correction
 mfor_CR2 <- vcovCR(Overall.I2, type = "CR2")
 Overall.I2RVE<- coef_test(Overall.I2, vcov = mfor_CR2, test = ("Satterthwaite"))
-Overall.I2RVECI2 <- conf_int(Overall.I2, vcov = mfor_CR2)
+Overall.I2RVECI <- conf_int(Overall.I2, vcov = mfor_CR2)
 
 
 
