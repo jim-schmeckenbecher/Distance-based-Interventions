@@ -12,6 +12,8 @@ Total <- read_delim("03_Data.csv",
 
 Total <- subset(Total, NSSI ==0 )
 
+
+
 #Study Aggregate Data for descriptive Statistics
 
 # Independend of time
@@ -39,9 +41,9 @@ Overall <- rma.mv(d, v, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total
 summary(Overall)
 
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(Overall)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(Overall)
 
 # RVE Correction
 
@@ -54,9 +56,9 @@ OverallRVECI<- conf_int(Overall, vcov = mfor_CR2)
 Overall.T <- rma.mv(d, v, mods = ~ Type, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.T)
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(Overall.T)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(Overall.T)
 
 
 #RVE
@@ -73,9 +75,9 @@ Total$Acting <- Total$Acting*(-1)
 Overall.T2 <- rma.mv(d, v, mods = ~ Acting, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.T2)
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(Overall.T)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(Overall.T)
 
 
 #RVE
@@ -89,9 +91,9 @@ Overall.T2RVECI<- conf_int(Overall.T2, vcov = mfor_CR2)
 OverallC <- rma.mv(d,v, mods =~TAU, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(OverallC)
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(OverallC)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(OverallC)
 
 # Robust Variance estimation 
 
@@ -105,9 +107,9 @@ Overall.I <- rma.mv(d,v, mods= ~Autonomous, random= ~1 |Study_ID/Outcome_ID,tdis
 summary(Overall.I)
 
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(Overall.I)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(Overall.I)
 
 #RVE Correction
 mfor_CR2 <- vcovCR(Overall.I, type = "CR2")
@@ -125,9 +127,9 @@ Total$Human <- Total$Human*(-1)
 Overall.I2 <- rma.mv(d,v, mods= ~Human, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.I2)
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(Overall.I2)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(Overall.I2)
 
 #RVE Correction
 mfor_CR2 <- vcovCR(Overall.I2, type = "CR2")
@@ -142,9 +144,9 @@ Overall.I2RVECI <- conf_int(Overall.I2, vcov = mfor_CR2)
 OverallF <- rma.mv(d,v, mods= ~Follow_up, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(OverallF)
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(OverallF)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(OverallF)
 
 # Robust Variance estimation 
 
@@ -172,9 +174,9 @@ Excl.Suicide <- subset(Total, Suicide == 0)
 Overall.TS <- rma.mv(d,v, mods= ~Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Excl.Suicide, method="REML")
 summary(Overall.TS)
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(Overall.TS)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(Overall.TS)
 
 #RVE
 mfor_CR2 <- vcovCR(Overall.TS, type = "CR2")
@@ -186,9 +188,9 @@ Overall.TSRVECI<- conf_int(Overall.TS, vcov = mfor_CR2)
 Overall.TT <- rma.mv(d,v, mods= ~ Thinking+TAU, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.TT)
 
-#Optimization Control
-par(mfrow=c(2,4))
-profile(Overall.TT)
+#Optimization Control (Remove # to run)
+#par(mfrow=c(2,4))
+#profile(Overall.TT)
 
 #RVE
 mfor_CR2 <- vcovCR(Overall.TT, type = "CR2")
