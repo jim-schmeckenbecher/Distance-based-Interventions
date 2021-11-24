@@ -17,17 +17,17 @@ Total <- subset(Total, NSSI ==0 )
 #Study Aggregate Data for descriptive Statistics
 
 # Independend of time
-Total2 <- escalc(yi=d, vi=v, data=Total )
+Total2 <- escalc(yi=yi, vi=variance, data=Total )
 Study_avarage<- aggregate(Total2, cluster= Study_ID, struct = "CS", rho= 0.6, na.rm=TRUE)
 
 #At Post 
 Post <- subset(Total, Follow_up == 0)
-Post2 <- escalc(yi=d, vi=v, data=Post )
+Post2 <- escalc(yi=yi, vi=variance, data=Post )
 Study_avaragePost<- aggregate(Post2, cluster= Study_ID, struct = "CS", rho= 0.6, na.rm=TRUE)
 
 # At Follow up
 Follow_up <- subset(Total, Follow_up == 1)
-Follow_up2 <- escalc(yi=d, vi=v, data=Follow_up )
+Follow_up2 <- escalc(yi=yi, vi=variance, data=Follow_up )
 Study_avarageFollow_up<- aggregate(Follow_up2, cluster= Study_ID, struct = "CS", rho= 0.6, na.rm=TRUE)
 
 # n at Postintervention
@@ -37,7 +37,7 @@ Postn<- sum(Study_avaragePost$n)
 #Main Analysis####
 
 #_Unmoderated#####
-Overall <- rma.mv(d, v, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+Overall <- rma.mv(yi = yi, V = variance, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall)
 
 
@@ -53,8 +53,10 @@ OverallRVECI<- conf_int(Overall, vcov = mfor_CR2)
 
 #_Mod: Thoughts vs. Acts.#####
 
-Overall.T <- rma.mv(d, v, mods = ~ Type, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+Overall.T <- rma.mv(yi =yi, V=variance, mods = ~ Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.T)
+
+View(Total)
 
 #Optimization Control (Remove # to run)
 #par(mfrow=c(2,4))
@@ -72,7 +74,7 @@ Total$Acting<- Total$Thinking -1
 Total$Acting <- Total$Acting*(-1)
 
 
-Overall.T2 <- rma.mv(d, v, mods = ~ Acting, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+Overall.T2 <- rma.mv(yi=yi, V=variance, mods = ~ Acting, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.T2)
 
 #Optimization Control (Remove # to run)
@@ -88,7 +90,7 @@ Overall.T2RVECI<- conf_int(Overall.T2, vcov = mfor_CR2)
 
 #_Mod: Controlgroup (TAU vs. waitlist and Attention_Placebo)####
 
-OverallC <- rma.mv(d,v, mods =~TAU, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+OverallC <- rma.mv(yi=yi, V=variance, mods =~TAU, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(OverallC)
 
 #Optimization Control (Remove # to run)
@@ -103,7 +105,7 @@ Overall.CRVECI <- conf_int(OverallC, vcov = mfor_CR2)
 
 #_Mod:Autonomous vs. Human involved#####
 
-Overall.I <- rma.mv(d,v, mods= ~Autonomous, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+Overall.I <- rma.mv(yi=yi, V=variance, mods= ~Autonomous, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.I)
 
 
@@ -124,7 +126,7 @@ Total$Human<- Total$Autonomous -1
 Total$Human <- Total$Human*(-1)
 
 
-Overall.I2 <- rma.mv(d,v, mods= ~Human, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+Overall.I2 <- rma.mv(yi=yi,V=variance, mods= ~Human, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.I2)
 
 #Optimization Control (Remove # to run)
@@ -141,9 +143,10 @@ Overall.I2RVECI <- conf_int(Overall.I2, vcov = mfor_CR2)
 
 #_Mod: Time (Follow_up vs. Post_Intervention)#####
 
-OverallF <- rma.mv(d,v, mods= ~Follow_up, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+OverallF <- rma.mv(yi=yi, V=variance, mods= ~Follow_up, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(OverallF)
 
+View(Total)
 #Optimization Control (Remove # to run)
 #par(mfrow=c(2,4))
 #profile(OverallF)
@@ -154,14 +157,16 @@ mfor_CR2 <- vcovCR(OverallF, type = "CR2")
 Overall.FCRVE<- coef_test(OverallF, vcov = mfor_CR2, test = ("Satterthwaite"))
 Overall.FCRVECI <- conf_int(OverallF, vcov = mfor_CR2)
 
-# Sensitivity Analysis####
+# Sensitivty Analysis####
 
 # NSSI Included 
 Total2 <- read_delim("03_Data.csv", 
                     ";", escape_double = FALSE, trim_ws = TRUE)
 
-Overall.T2 <- rma.mv(d,v, mods= ~ Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total2, method="REML")
+Overall.T2 <- rma.mv(yi=yi, V=variance, mods= ~ Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total2, method="REML")
 summary(Overall.T2)
+
+?rma.mv
 
 #RVE Correction
 mfor_CR2 <- vcovCR(Overall.T2, type = "CR2")
@@ -171,7 +176,7 @@ Overall.TRVECI2<- conf_int(Overall.T2, vcov = mfor_CR2)
 # Suicide Excluded
 Excl.Suicide <- subset(Total, Suicide == 0)
 
-Overall.TS <- rma.mv(d,v, mods= ~Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Excl.Suicide, method="REML")
+Overall.TS <- rma.mv(yi=yi, V=variance, mods= ~Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Excl.Suicide, method="REML")
 summary(Overall.TS)
 
 #Optimization Control (Remove # to run)
@@ -185,7 +190,7 @@ Overall.TSRVECI<- conf_int(Overall.TS, vcov = mfor_CR2)
 
 #_Exploratory Analysis: TAU+Thinking#####
 
-Overall.TT <- rma.mv(d,v, mods= ~ Thinking+TAU, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+Overall.TT <- rma.mv(yi=yi, V=variance, mods= ~ Thinking+TAU, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.TT)
 
 #Optimization Control (Remove # to run)
@@ -248,11 +253,11 @@ viz_forest(x =Overall.T)
 # Aggregated by Thougths and Acts 
 
 Thinks<- subset(Total, Total$Thinking ==1)
-Thinks <- escalc(yi=d, vi=v, data = Thinks)
+Thinks <- escalc(yi=yi, vi=variance, data = Thinks)
 Total.Thinking<-  aggregate(Thinks, cluster = Study_ID, struct = "CS", rho =0.6)
 
 Acts<- subset(Total, Total$Thinking ==0)
-Acts <- escalc(yi=d, vi=v, data = Acts)
+Acts <- escalc(yi=yi, vi=variance, data = Acts)
 Total.Acts <- aggregate(Acts, cluster = Study_ID, struct = "CS", rho =0.6)
 
 Study_avarage<- rbind(Total.Thinking,Total.Acts)
