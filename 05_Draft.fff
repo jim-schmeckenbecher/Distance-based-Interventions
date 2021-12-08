@@ -1,0 +1,21 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{01_Plots/DBI_Flow_Chart.pdf}
+\caption{Flow Chart of all studies}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{01_Plots/Rplot2.png}
+\caption{Funnel Plot, including all outcomes according to moderator type}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{01_Plots/RoB-II.pdf}
+\caption{Quality Assessment of all independent studies}
+\end{figure*}

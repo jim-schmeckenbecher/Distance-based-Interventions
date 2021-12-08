@@ -287,4 +287,26 @@ viz_forest(Avarage_effect,
            annotate_CI = TRUE)
 
 
+# Forest Plot 
+with(Total, forest(yi, vi= variance, 
+                   slab= paste(Author,Year, sep =";"),
+                   ilab= Type_Spesific, ilab.xpos =c(-2), 
+                   xlim= c(-3,2), 
+                   order = "obs", 
+                   cex= 0.5,
+                   at= seq(-1,1, by=1),
+                   header="Author(s) and Year",
+                   xlab = "SMD"))
 
+
+addpoly(x =OverallRVE$beta[1], sei = OverallRVE$SE[1], cex = 0.5)
+abline(h=0)
+
+?forest.default
+
+View(Total)
+Overall.TRVE$SE[1]
+
+Overall.TRVE$beta[1]
+
+?addpoly

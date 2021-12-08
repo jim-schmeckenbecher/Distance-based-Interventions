@@ -1,0 +1,18 @@
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.16}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.84}}@{}}
+\caption{Outcome allocation to Moderator Analyses}\tabularnewline
+\toprule
+Moderator group & \textbf{Outcome Name} \\
+\midrule
+\endfirsthead
+\toprule
+Moderator group & \textbf{Outcome Name} \\
+\midrule
+\endhead
+Acts & Suicide, suicide attempts, self harming behaviours. \\
+Thoughts & Suicidal thoughts, suicidal ideation, suicide plans. \\
+Human involved & Phone calls, cognitive behavioural treatment, personalized letters or personalized e-mails. \\
+Autonomous & Applications, websites, non-individualized letters or non-individualized e-mails. \\
+\bottomrule
+\end{longtable}
