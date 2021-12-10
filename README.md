@@ -1,5 +1,4 @@
 # Distance-based-Interventions
-ReadMe:
 
 In this repository all data is available used in the meta-analyses: “Effectiveness of distance Based suicide Intervention programs, a multi-level meta-analysis and systematic review.”
 
