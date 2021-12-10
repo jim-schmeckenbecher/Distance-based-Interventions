@@ -1,11 +1,11 @@
 # Distance-based-Interventions
 
-In this repository all data is available used in the meta-analyses: “Effectiveness of distance Based suicide Intervention programs, a multi-level meta-analysis and systematic review.”
+In this repository all data is made available that was used in the meta-analyses: “Effectiveness of distance Based suicide Intervention programs, a multi-level meta-analysis and systematic review.”
 
-If you want the redo the analyses please enter the Project using the Project File: "Distance based Interventions.Rproj"
-And Click on: "Build All".
+If you want the redo the analyses please download the repository and enter the Project using the Project File: "Distance based Interventions.Rproj" using R-Studio.
+Click on: "Build All" to recreate the submitted manuscript.
 
-Description of included Files:
+## Description of included Files:
 
   00_Legacy_Data: Includes all Backup Data of previous Version, before a Github repository was initialised.
 
