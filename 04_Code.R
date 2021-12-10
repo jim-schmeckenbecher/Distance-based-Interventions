@@ -56,7 +56,6 @@ OverallRVECI<- conf_int(Overall, vcov = mfor_CR2)
 Overall.T <- rma.mv(yi =yi, V=variance, mods = ~ Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(Overall.T)
 
-View(Total)
 
 #Optimization Control (Remove # to run)
 #par(mfrow=c(2,4))
@@ -93,9 +92,14 @@ Overall.T2RVECI<- conf_int(Overall.T2, vcov = mfor_CR2)
 OverallC <- rma.mv(yi=yi, V=variance, mods =~TAU, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(OverallC)
 
+
+OverallC <- rma.mv(yi=yi, V=variance, mods =~TAU+ Thinking, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
+summary(OverallC)
+
+
 #Optimization Control (Remove # to run)
-#par(mfrow=c(2,4))
-#profile(OverallC)
+par(mfrow=c(2,4))
+profile(OverallC)
 
 # Robust Variance estimation 
 
@@ -146,7 +150,6 @@ Overall.I2RVECI <- conf_int(Overall.I2, vcov = mfor_CR2)
 OverallF <- rma.mv(yi=yi, V=variance, mods= ~Follow_up, random= ~1 |Study_ID/Outcome_ID,tdist = TRUE, data=Total, method="REML")
 summary(OverallF)
 
-View(Total)
 #Optimization Control (Remove # to run)
 #par(mfrow=c(2,4))
 #profile(OverallF)
@@ -187,6 +190,42 @@ summary(Overall.TS)
 mfor_CR2 <- vcovCR(Overall.TS, type = "CR2")
 Overall.TSRVE <- coef_test(Overall.TS, vcov = mfor_CR2, test = ("Satterthwaite"))
 Overall.TSRVECI<- conf_int(Overall.TS, vcov = mfor_CR2)
+
+
+
+
+# Forest Plot  for thougths and behaviours 
+# Allocating distance based intervention Type
+
+Total$DBI_Type <- ifelse(Total$TAU ==1, "TAU", "non-TAU")
+
+with(Total, forest(yi, vi= variance, 
+                  slab= paste(Author,Year, sep =";"),
+                  xlab = ("SMD"),
+                  xlim= c(-2,2), 
+                  ylim= c(-3,120),
+                  order =  Total$Thinking, rows =c(1:46,50:113),
+                  cex= .75,                   at= seq(-1.25,1.25),
+                  header="Author(s) and Year"))
+
+text((-1.8), c(116, 48), c("Suicidal Thoughts","Suicidal Behaviours"), cex = .75, font =2)
+
+addpoly(x =OverallRVECI$beta[1], sei = OverallRVECI$SE[1], cex = .75, ylim = 20, row = -1)
+addpoly(x =Overall.TRVECI$beta[1], sei = Overall.TRVECI$SE[1], cex = .75, ylim = 21, row = -3)
+addpoly(x =Overall.T2RVECI$beta[1], sei = Overall.T2RVECI$SE[1], cex = .75, ylim = 21, row = -5)
+
+
+text((-1.25), c(-1,-3, -5), c("Unmoderated Model Average","Moderated Model Average (Behaviour)"
+                             ,"Moderated Model Average (Thoughts)"), cex = .75, font =2)
+
+abline(h =c(1.5, 3.5,6.5,7.5,8.5,12.5,14.5,18.5,22.5,28.5,29.5,31.5,32.5,33.5,36.5,42.5,45.5,46.5,
+            50.5,51.5,52.5,54.5,56.5,58.5,62.5,66.5,70.5,71.5,74.5,76.5,78.5,84.5,85.5,86.5,87.5,89.5,95.5,97.5,98.5,
+            99.5,102.5,104.5,107.5,113.5), lty="dotted")
+
+
+
+
+
 
 #_Exploratory Analysis: TAU+Thinking#####
 
@@ -231,82 +270,7 @@ gendA<- legend(x = "topright",
                pch= c(1,20,5,18))
 
 
-# Caterpiller Plot  
+sum(Total$TAU)+((sum(Total$Attention) +sum(Total$wait)))
 
-forest(Overall.T,
-       xlim=c(-2.5,3.5),        ### adjust horizontal plot region limits
-       order="obs",             ### order by size of yi
-       slab=NA, annotate=FALSE,### remove study labels and annotations
-       efac=0,                  ### remove vertical bars at end of CIs
-       pch= ifelse(Total$Thinking < '1', 20,1),                  ### changing point symbol to filled circle
-       psize=4,                 ### increase point size
-       cex.lab=1, cex.axis=1,   ### increase size of x-axis title/labels
-       lty=c("solid","blank"))  ### remove horizontal line at top of plot
+sum(Total$TAU)/ (sum(Total$TAU)+ sum(Total$Attention) +sum(Total$wait))
 
-legendPrePost<- legend(x = "right",
-                       legend= c("Thinking","Behaviour"),
-                       pch= c(1,20))
-
-
-viz_forest(x =Overall.T)
-
-# Aggregated by Thougths and Acts 
-
-Thinks<- subset(Total, Total$Thinking ==1)
-Thinks <- escalc(yi=yi, vi=variance, data = Thinks)
-Total.Thinking<-  aggregate(Thinks, cluster = Study_ID, struct = "CS", rho =0.6)
-
-Acts<- subset(Total, Total$Thinking ==0)
-Acts <- escalc(yi=yi, vi=variance, data = Acts)
-Total.Acts <- aggregate(Acts, cluster = Study_ID, struct = "CS", rho =0.6)
-
-Study_avarage<- rbind(Total.Thinking,Total.Acts)
-
-Study_avarage$Study_ID <- 1:45
-
-Avarage_effect<- rma(Study_avarage, mods=Thinking)
-
-Study_avarage$Year<- format(round(Study_avarage$Year,1), nsmall=1)
-
-Study_avarage$ST_ID <- paste(Study_avarage$Author, "(",Study_avarage$Year,")",sep="")
-
-
-study_table <- data.frame(
-  Study = Study_avarage$ST_ID,
-  Intervention = Study_avarage$Intervention,
-  Country = Study_avarage$Country)
-
-
-viz_forest(Avarage_effect,
-           xlab= "SMD",
-           group = Study_avarage$Thinking,
-           summary_label=c("Summary (Acting)", "Summary (Thinking)"),
-           summary_table = c("Summary (suicide behaviours)", "Summary(suicidal thoughts)"),
-           study_labels =Study_avarage$ST_ID, 
-           study_table = study_table,
-           annotate_CI = TRUE)
-
-
-# Forest Plot 
-with(Total, forest(yi, vi= variance, 
-                   slab= paste(Author,Year, sep =";"),
-                   ilab= Type_Spesific, ilab.xpos =c(-2), 
-                   xlim= c(-3,2), 
-                   order = "obs", 
-                   cex= 0.5,
-                   at= seq(-1,1, by=1),
-                   header="Author(s) and Year",
-                   xlab = "SMD"))
-
-
-addpoly(x =OverallRVE$beta[1], sei = OverallRVE$SE[1], cex = 0.5)
-abline(h=0)
-
-?forest.default
-
-View(Total)
-Overall.TRVE$SE[1]
-
-Overall.TRVE$beta[1]
-
-?addpoly
