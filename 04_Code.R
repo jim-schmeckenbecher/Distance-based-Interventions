@@ -217,22 +217,29 @@ gendA<- legend(x = "topright",
 with(Total, forest(yi, vi= variance, 
                    slab= paste(Author,Year, sep =";"),
                    xlab = ("SMD"),
-                   xlim= c(-2,2), 
+                   xlim= c(-4.5,4.5), 
                    ylim= c(-3,120),
                    order =  Total$Thinking, rows =c(1:46,50:113),
-                   cex= .75,                   at= seq(-1.25,1.25),
+                   cex= 1.25,                   
+                   at= seq(-2,2),
+                   efac = c(0.125,0.75),
                    header="Author(s) and Year"))
 
-text((-1.8), c(116, 48), c("Suicidal Thoughts","Suicidal Behaviours"), cex = .75, font =2)
 
-addpoly(x =OverallRVECI$beta[1], sei = OverallRVECI$SE[1], cex = .75, ylim = 20, row = -1)
-addpoly(x =Overall.TRVECI$beta[1], sei = Overall.TRVECI$SE[1], cex = .75, ylim = 21, row = -3)
-addpoly(x =Overall.T2RVECI$beta[1], sei = Overall.T2RVECI$SE[1], cex = .75, ylim = 21, row = -5)
+text((-3.5), c(116, 48), c("Suicidal Thoughts","Suicidal Behaviours"), cex = 1.25, font =2)
+
+addpoly(x =OverallRVECI$beta[1], sei = OverallRVECI$SE[1], cex = .75, ylim = 20, row = -1, annotate = FALSE)
+addpoly(x =Overall.TRVECI$beta[1], sei = Overall.TRVECI$SE[1], cex = .75, ylim = 21, row = -3, annotate = FALSE)
+addpoly(x =Overall.T2RVECI$beta[1], sei = Overall.T2RVECI$SE[1], cex = .75, ylim = 21, row = -5, annotate = FALSE)
 
 
-text((-1.25), c(-1,-3, -5), c("Unmoderated Model Average","Moderated Model Average (Behaviour)"
-                              ,"Moderated Model Average (Thoughts)"), cex = .75, font =2)
+text((4), c(-1, -3, -5), c("-0.12 [-0.16;-0.08]","-0.06 [-0.09;-0.03]","-0.17 [-0.24;-0.11]"), cex = 1.25, font =2)
+
+text((-3), c(-1,-3, -5), c("Unmoderated Model Average","Moderated Model Average (Behaviour)"
+                              ,"Moderated Model Average (Thoughts)"), cex = 1.25, font =2)
 
 abline(h =c(1.5, 3.5,6.5,7.5,8.5,12.5,14.5,18.5,22.5,28.5,29.5,31.5,32.5,33.5,36.5,42.5,45.5,46.5,
             50.5,51.5,52.5,54.5,56.5,58.5,62.5,66.5,70.5,71.5,74.5,76.5,78.5,84.5,85.5,86.5,87.5,89.5,95.5,97.5,98.5,
             99.5,102.5,104.5,107.5,113.5), lty="dotted")
+abline(h =0)
+
