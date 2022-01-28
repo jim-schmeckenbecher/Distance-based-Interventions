@@ -5,6 +5,7 @@ library(readr)
 library(clubSandwich)
 library("tidyverse")
 library(metaviz)
+library(devEMF)
 
 ?profile
 # Data Importation & Preparation ####
@@ -205,8 +206,9 @@ for (i in 1:nrow(Total)) {
 }
 
 # Funnel Plot
-funnel(Overall, pch =Total$pch, legend= TRUE, xlab = "Cohens d")
 
+funnel(Overall, pch =Total$pch, legend= TRUE, xlab = "Cohens d")
+dev.off()
 #Introducing legend
 gendA<- legend(x = "topright",
                legend= c("TAU+Thinking","TAU+Acting","Non-TAU+Thinking", "Non-TAU+Acting"),
@@ -242,4 +244,3 @@ abline(h =c(1.5, 3.5,6.5,7.5,8.5,12.5,14.5,18.5,22.5,28.5,29.5,31.5,32.5,33.5,36
             50.5,51.5,52.5,54.5,56.5,58.5,62.5,66.5,70.5,71.5,74.5,76.5,78.5,84.5,85.5,86.5,87.5,89.5,95.5,97.5,98.5,
             99.5,102.5,104.5,107.5,113.5), lty="dotted")
 abline(h =0)
-
