@@ -14,14 +14,18 @@ Click on: "Build All" to recreate the submitted manuscript.
   
   04_Code.R: The R-Code used to calculate the paper. 
   
-  05_Draft: [ Will be made available after the paper was published in the peer reviewed Journal]
-	  - Main: 05_Draft.Rmd, The reporducible Manuscript of the paper. When opened click on 		“Build all” to replicate the manuscript 1-to-1.
-	  - Support: Folder: c(05_Draft, 05_Draft_files, 05_Draft.fff, 05_Draft.tex, 05_Draft.ttt); 		Support files created by R during building of the word or pdf document.
-	  - Outputs: 05_Draft.pdf; a pdf print of the manuscript; 05_Draft.doxc; a word print of the 	manuscript. Note: Editing differs between both, due to different commands being applicably 	during the building of a word or pdf document.
-
+  05_Draft: [ Will be made available after the paper was published in the peer reviewed Journal] 
+  Main: 05_Draft.Rmd, The reporducible Manuscript of the paper. When opened click on “Build all” to replicate the originally manuscript.
+  Pre Registration: Original Preregistration made in Prospero
+  
 06_references.bib: A .bib document for creating references. 
 
 08_Notation_for_03_Data: Notations explaining the naming scheme in 03_Data.csv.
+
+09_Search Strings: All Search Strings used. 
+
+Distance Based Interventions.Rproj
+The Project File for all R Data.
 
 - apa6-meta.csl:  A formatting file, allowing to build APA conforming papers.
 - elsevier-vancouver.csl: A formatting file, allowing to build vancouver confirming papers.
