@@ -27,7 +27,6 @@ Click on: "Build All" to recreate the submitted manuscript.
 Distance Based Interventions.Rproj
 The Project File for all R Data.
 
-- apa6-meta.csl:  A formatting file, allowing to build APA conforming papers.
 - elsevier-vancouver.csl: A formatting file, allowing to build vancouver confirming papers.
 - Makefile: A File allowing for the replication of the paper.
 - Renv : The renv background files. 
