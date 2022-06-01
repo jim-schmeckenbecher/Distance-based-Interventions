@@ -7,7 +7,6 @@ Click on: "Build All" to recreate the submitted manuscript.
 
 ## Description of included Files:
 
-  00_Legacy_Data: Includes all Backup Data of previous Version, before a Github repository was initialised.
 
   01_Plots_Tables:  Includes all Plots and Tables used for the paper.
   
@@ -21,8 +20,6 @@ Click on: "Build All" to recreate the submitted manuscript.
 	  - Outputs: 05_Draft.pdf; a pdf print of the manuscript; 05_Draft.doxc; a word print of the 	manuscript. Note: Editing differs between both, due to different commands being applicably 	during the building of a word or pdf document.
 
 06_references.bib: A .bib document for creating references. 
-
-07_RoB-II: All Data associated to the RoB-II (with exception of the final print, which can be found 	in 01_Plots and Tables).
 
 08_Notation_for_03_Data: Notations explaining the naming scheme in 03_Data.csv.
 
